@@ -5,9 +5,11 @@ import {handleMessageEvent} from "./event/message";
 dotenvConfig(); // read environment variables from .env file
 
 // DiscordJS documentations can be found here
-// https://discord.js.org/#/docs/main/stable/general/welcome
+// https://discord.js.org/#/docs/main/master/general/welcome
 
-const client = new Client();
+const client = new Client({
+  intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES]
+});
 
 client.on("ready", () => {
   console.log(`Logged in as "${(client.user as ClientUser).tag}"`);
@@ -17,7 +19,7 @@ client.on("error", (error: Error) => {
   console.warn(`An error occurred: ${error.message}`);
 });
 
-client.on("message", handleMessageEvent);
+client.on("messageCreate", handleMessageEvent);
 
 if (process.env.BOT_TOKEN)
   // check if `BOT_TOKEN` environment variable is defined
