@@ -1,5 +1,6 @@
 import {config as dotenvConfig} from "dotenv";
 import {Client, ClientUser, Intents} from "discord.js";
+import {handleMessageEvent} from "./event/message";
 
 dotenvConfig(); // read environment variables from .env file
 
@@ -15,6 +16,8 @@ client.on("ready", () => {
 client.on("error", (error: Error) => {
   console.warn(`An error occurred: ${error.message}`);
 });
+
+client.on("message", handleMessageEvent);
 
 if (process.env.BOT_TOKEN)
   // check if `BOT_TOKEN` environment variable is defined
