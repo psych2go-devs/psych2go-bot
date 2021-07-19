@@ -10,6 +10,12 @@ Clone this project using `git`
 git clone https://github.com/psych2go-devs/psych2go-bot
 ```
 
+Change directory to the project (`cd psych2go-bot/`), then run the following command to install dependencies
+
+```
+npm i
+```
+
 If you are using this project to host a bot, jump to the [Deploying](#deploying)
 
 ## Contributing
