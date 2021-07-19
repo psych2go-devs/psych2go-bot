@@ -4,6 +4,12 @@ Psych2Go Bot (Psi) does useful and fun stuff writen in [TypeScript][typescript-w
 
 # How does this work?
 
+Clone this project using `git`
+
+```
+git clone https://github.com/Noxturnix/psych2go-bot
+```
+
 In [src/](src/) contains the source codes of the bot. They are writen in [TypeScript][typescript-webpage]; it's similar to [JavaScript][javascript-webpage], you can add type to variable, class, etc. You can make change in the directory.
 
 In [dist/](dist/) will contain compiled codes from [src/](src/). Do not make change on this directory hence they will be replaced will new codes after you compile the codes.
