@@ -1,0 +1,31 @@
+{
+  "name": "psych2go-bot",
+  "version": "0.0.1",
+  "description": "DiscordJS bot used in Psych2Go Discord server!",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "prettify": "prettier -w ./src",
+    "run": "node .",
+    "start": "npm run prettify && npm run build && npm run run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Noxturnix/psych2go-bot.git"
+  },
+  "author": "psych2go bot contributors",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/Noxturnix/psych2go-bot/issues"
+  },
+  "homepage": "https://github.com/Noxturnix/psych2go-bot",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0",
+    "typescript": "^4.3.5"
+  },
+  "devDependencies": {
+    "@types/node": "^16.3.3",
+    "prettier": "^2.3.2"
+  }
+}
