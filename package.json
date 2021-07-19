@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Noxturnix/psych2go-bot.git"
+    "url": "git+https://github.com/psych2go-devs/psych2go-bot.git"
   },
   "author": "psych2go bot contributors",
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
-    "url": "https://github.com/Noxturnix/psych2go-bot/issues"
+    "url": "https://github.com/psych2go-devs/psych2go-bot"
   },
-  "homepage": "https://github.com/Noxturnix/psych2go-bot",
+  "homepage": "https://github.com/psych2go-devs/psych2go-bot",
   "dependencies": {
     "discord.js": "^12.5.3",
     "dotenv": "^10.0.0",
