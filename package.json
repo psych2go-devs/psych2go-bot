@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Noxturnix/OpenIS.git"
+    "url": "git+https://github.com/psych2go-devs/psych2go-bot.git"
   },
   "keywords": [
     "Discord",
@@ -28,9 +28,9 @@
   "author": "Noxturnix",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Noxturnix/OpenIS/issues"
+    "url": "https://github.com/psych2go-devs/psych2go-bot"
   },
-  "homepage": "https://github.com/Noxturnix/OpenIS#readme",
+  "homepage": "https://github.com/psych2go-devs/psych2go-bot",
   "dependencies": {
     "discord.js": "^13.1.0",
     "dotenv": "^10.0.0",
