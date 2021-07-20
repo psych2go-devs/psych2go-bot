@@ -1,6 +1,6 @@
 import {config as dotenvConfig} from "dotenv";
 import {Client, ClientUser, Intents} from "discord.js";
-import {handleMessageEvent} from "./event/message";
+import {handleMessageEvent} from "./events/messageCreate";
 
 dotenvConfig(); // read environment variables from .env file
 
