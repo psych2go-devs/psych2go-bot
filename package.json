@@ -7,7 +7,8 @@
     "build": "tsc",
     "prettify": "prettier -w ./src",
     "run": "node .",
-    "start": "npm run prettify && npm run build && npm run run"
+    "start": "npm run prettify && npm run build && npm run run",
+    "watch": "tsc -w"
   },
   "repository": {
     "type": "git",
