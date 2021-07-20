@@ -2,7 +2,7 @@ import { GuildMember, Message } from "discord.js";
 import { ADMIN_ROLE_ID } from "..";
 import { messageCommands } from "../commands/messageCommands";
 
-export const handleMessageEvent = (message: Message) => {
+export const handleMessageCreateEvent = (message: Message) => {
   if (!message.author.bot && message.guild) {
     let messageLower = message.content.toLowerCase();
     let userCommandRan = false;

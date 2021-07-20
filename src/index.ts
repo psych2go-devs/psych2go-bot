@@ -1,6 +1,6 @@
 import { config as dotenvConfig } from "dotenv";
 import { Client, ClientUser, Intents, Snowflake } from "discord.js";
-import { handleMessageEvent } from "./events/messageCreate";
+import { handleMessageCreateEvent } from "./events/messageCreate";
 import { handleGuildMemberAddEvent } from "./events/guildMemberAdd";
 
 dotenvConfig(); // read environment variables from .env file
@@ -31,7 +31,7 @@ client.on("error", (error: Error) => {
   console.warn(`An error occurred: ${error.message}`);
 });
 
-client.on("messageCreate", handleMessageEvent);
+client.on("messageCreate", handleMessageCreateEvent);
 client.on("guildMemberAdd", handleGuildMemberAddEvent);
 
 // Handle environment variables
