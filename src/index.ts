@@ -2,6 +2,7 @@ import { config as dotenvConfig } from "dotenv";
 import { Client, ClientUser, Intents, Snowflake } from "discord.js";
 import { handleMessageCreateEvent } from "./events/messageCreate";
 import { handleGuildMemberAddEvent } from "./events/guildMemberAdd";
+import { handleGuildMemberRemoveEvent } from "./events/guildMemberRemove";
 
 dotenvConfig(); // read environment variables from .env file
 
@@ -18,7 +19,12 @@ export const destroyClientAndExit = (exitCode: number = 0) => {
 // Initialize new client
 
 const client = new Client({
-  intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES]
+  intents: [
+    Intents.FLAGS.GUILDS,
+    Intents.FLAGS.GUILD_MESSAGES,
+    Intents.FLAGS.GUILD_MEMBERS,
+    Intents.FLAGS.GUILD_PRESENCES
+  ]
 });
 
 // Handle events
@@ -33,6 +39,7 @@ client.on("error", (error: Error) => {
 
 client.on("messageCreate", handleMessageCreateEvent);
 client.on("guildMemberAdd", handleGuildMemberAddEvent);
+client.on("guildMemberRemove", handleGuildMemberRemoveEvent);
 
 // Handle environment variables
 
