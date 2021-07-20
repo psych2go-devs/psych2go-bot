@@ -1,4 +1,4 @@
-import {Message} from "discord.js";
+import { Message } from "discord.js";
 
 export const handleMessageEvent = (message: Message) => {
   if (!message.author.bot) {
