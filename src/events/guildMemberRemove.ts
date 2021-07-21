@@ -3,6 +3,7 @@ import { GuildMember, PartialGuildMember, User } from "discord.js";
 export const handleGuildMemberRemoveEvent = async (
   member: GuildMember | PartialGuildMember
 ) => {
+  // Code runs when a member leaves or is removed to the guild (server)
   // https://stackoverflow.com/questions/62577866/discord-js-listening-for-kicks
   let kickLog = (
     await member.guild.fetchAuditLogs({
@@ -23,9 +24,9 @@ export const handleGuildMemberRemoveEvent = async (
     kickLog.createdAt > member.joinedAt
   ) {
     // User is kicked
-    member.guild.systemChannel?.send(
-      `<@${member.id}> has been kicked by <@${kickLog.executor?.id}>`
-    );
+    // member.guild.systemChannel?.send(
+    //   `<@${member.id}> has been kicked by <@${kickLog.executor?.id}>`
+    // );
   } else if (
     banLog &&
     member.joinedAt &&
@@ -33,11 +34,11 @@ export const handleGuildMemberRemoveEvent = async (
     banLog.createdAt > member.joinedAt
   ) {
     // User is banned
-    member.guild.systemChannel?.send(
-      `<@${member.id}> has been banned by <@${banLog.executor?.id}>`
-    );
+    // member.guild.systemChannel?.send(
+    //   `<@${member.id}> has been banned by <@${banLog.executor?.id}>`
+    // );
   } else {
     // User left
-    member.guild.systemChannel?.send(`<@${member.id}> left the server`);
+    // member.guild.systemChannel?.send(`<@${member.id}> left the server`);
   }
 };
