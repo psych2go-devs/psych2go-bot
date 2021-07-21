@@ -10,7 +10,7 @@ interface MessageContains extends Array<MessageContain> {}
 
 export const messageContains: MessageContains = [
   {
-    contain: ["cookie", "testcookie"],
+    contain: ["cookie"],
     fn: (message: Message) => {
       message.channel.send("Someone say cookie? here's some cookie :cookie:");
     }
