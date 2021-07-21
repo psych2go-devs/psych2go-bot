@@ -47,9 +47,10 @@ export const handleMessageCreateEvent = (message: Message) => {
       for (let i = 0; i < messageContains.length; i++) {
         let messageContain = messageContains[i];
         let containFunction = null;
+        let containString = null;
 
         for (let j = 0; j < messageContain.contain.length; j++) {
-          let containString = messageContain.contain[j];
+          containString = messageContain.contain[j];
 
           if (message.content.includes(containString)) {
             containFunction = messageContain.fn;
@@ -57,7 +58,7 @@ export const handleMessageCreateEvent = (message: Message) => {
           }
         }
 
-        if (containFunction) containFunction(message);
+        if (containFunction) containFunction(message, containString as string);
       }
     }
   }
