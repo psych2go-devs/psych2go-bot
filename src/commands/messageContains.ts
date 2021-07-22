@@ -2,7 +2,7 @@ import { Message } from "discord.js";
 
 interface MessageContain {
   contain: Array<string>;
-  fn: (message: Message, match: string) => void | boolean;
+  fn: (message: Message, match: string) => void | boolean | Promise<any>;
 }
 interface MessageContains extends Array<MessageContain> {}
 
