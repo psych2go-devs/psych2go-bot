@@ -2,7 +2,7 @@ import { Message } from "discord.js";
 
 interface MessageCommand {
   command: string;
-  fn: (message: Message) => any;
+  fn: (message: Message, argv: string[]) => any;
 }
 
 interface MessageCommands {
@@ -10,21 +10,19 @@ interface MessageCommands {
   adminCommands: Array<MessageCommand>;
 }
 
-// all commands should have lower case
-
 export const messageCommands: MessageCommands = {
   userCommands: [
     {
       command: "hi psi",
-      fn: (message: Message) => {
-        message.reply("hey psych2goer!");
+      fn: (message, argv) => {
+        if (!argv.length) message.reply("hey psych2goer!");
       }
     }
   ],
   adminCommands: [
     {
       command: "test admin",
-      fn: (message: Message) => {
+      fn: (message, argv) => {
         message.reply("Test passed, you are an admin!");
       }
     }
