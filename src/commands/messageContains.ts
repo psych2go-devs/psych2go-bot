@@ -6,8 +6,6 @@ interface MessageContain {
 }
 interface MessageContains extends Array<MessageContain> {}
 
-// all contain messages should have lower case
-
 export const messageContains: MessageContains = [
   {
     contain: ["cookie"],
