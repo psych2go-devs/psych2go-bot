@@ -2,7 +2,7 @@ import { Message } from "discord.js";
 
 interface MessageCommand {
   command: string;
-  fn: (message: Message) => void | boolean | Promise<any>;
+  fn: (message: Message) => any;
 }
 
 interface MessageCommands {
