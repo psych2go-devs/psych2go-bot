@@ -62,7 +62,7 @@ export const handleMessageCreateEvent = (message: Message) => {
         for (let j = 0; j < messageContain.contain.length; j++) {
           containString = messageContain.contain[j];
 
-          if (message.content.includes(containString.toLowerCase())) {
+          if (messageLower.includes(containString.toLowerCase())) {
             containFunction = messageContain.fn;
             break;
           }
