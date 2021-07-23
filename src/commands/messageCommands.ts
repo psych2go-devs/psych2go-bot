@@ -16,7 +16,7 @@ export const messageCommands: MessageCommands = {
   userCommands: [
     {
       command: "hi psi",
-      fn: (message, argv) => {
+      fn: (message) => {
         message.reply("hey psych2goer!");
       }
     }
