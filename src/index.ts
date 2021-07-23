@@ -1,5 +1,5 @@
 import { config as dotenvConfig } from "dotenv";
-import { Client, ClientUser, Intents, Snowflake } from "discord.js";
+import { Client, ClientUser, Intents } from "discord.js";
 import { handleMessageCreateEvent } from "./events/messageCreate";
 import { handleGuildMemberAddEvent } from "./events/guildMemberAdd";
 import { handleGuildMemberRemoveEvent } from "./events/guildMemberRemove";
@@ -47,9 +47,12 @@ if (!process.env.BOT_TOKEN)
   // check if `BOT_TOKEN` environment variable is defined
   destroyClientAndExit();
 
-export const ADMIN_ROLE_ID = (
+export const ADMIN_ROLE_IDS = (
   process.env.ADMIN_ROLE_ID ? process.env.ADMIN_ROLE_ID : ""
-) as Snowflake;
+)
+  .split(",")
+  .filter((v) => v)
+  .map((v) => v.trim());
 
 // Login
 
