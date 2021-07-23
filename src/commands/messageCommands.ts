@@ -1,4 +1,5 @@
 import { Message, TextChannel } from "discord.js";
+import { execSync } from "child_process";
 
 interface MessageCommand {
   command: Array<string>;
@@ -7,6 +8,7 @@ interface MessageCommand {
 
 interface MessageCommands {
   userCommands: Array<MessageCommand>;
+  devCommands: Array<MessageCommand>;
   adminCommands: Array<MessageCommand>;
 }
 
@@ -19,8 +21,20 @@ export const messageCommands: MessageCommands = {
       fn: (message) => {
         message.reply("hey psych2goer!");
       }
+    },
+    {
+      command: [commandPrefix + "version", commandPrefix + "ver"],
+      fn: (message, argv) => {
+        let currentCommitHash = execSync("git rev-parse --short HEAD")
+          .toString()
+          .trim();
+
+        if (!argv.length)
+          message.reply(`Currently on commit \`${currentCommitHash}\``);
+      }
     }
   ],
+  devCommands: [],
   adminCommands: [
     {
       command: [commandPrefix + "bomb"],
