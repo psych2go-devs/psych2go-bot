@@ -1,7 +1,7 @@
 import { Message, TextChannel } from "discord.js";
 
 interface MessageCommand {
-  command: string;
+  command: Array<string>;
   fn: (message: Message, argv: string[]) => any;
 }
 
@@ -15,7 +15,7 @@ const commandPrefix = "psi!"; // This shouldn't be hard-coded, but anyway
 export const messageCommands: MessageCommands = {
   userCommands: [
     {
-      command: "hi psi",
+      command: ["hi psi", "hey psi", "hello psi"],
       fn: (message) => {
         message.reply("hey psych2goer!");
       }
@@ -23,7 +23,7 @@ export const messageCommands: MessageCommands = {
   ],
   adminCommands: [
     {
-      command: commandPrefix + "bomb",
+      command: [commandPrefix + "bomb"],
       fn: async (message, argv) => {
         let replyUsage = () => {
           message.reply(`Usage: ${commandPrefix}bomb <limit> [search]`);

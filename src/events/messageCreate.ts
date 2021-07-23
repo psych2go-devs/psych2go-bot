@@ -11,48 +11,60 @@ export const handleMessageCreateEvent = (message: Message) => {
     let userCommandExecuted = false;
     let adminCommandExecuted = false;
 
+    // Handle user commands
     for (let i = 0; i < messageCommands.userCommands.length; i++) {
       let messageCommand = messageCommands.userCommands[i];
 
-      if (messageLower.startsWith(messageCommand.command.toLowerCase())) {
-        let msgArgv = parseArgv(
-          messageTrim.slice(messageCommand.command.length)
-        );
+      for (let j = 0; j < messageCommand.command.length; j++) {
+        let commandString = messageCommand.command[j];
 
-        messageCommand.fn(message, msgArgv);
-        userCommandExecuted = true;
-        break;
+        if (messageLower.startsWith(commandString.toLowerCase())) {
+          let msgArgv = parseArgv(messageTrim.slice(commandString.length));
+
+          messageCommand.fn(message, msgArgv);
+          userCommandExecuted = true;
+          break;
+        }
       }
+
+      if (userCommandExecuted) break;
     }
 
-    let adminCommand = null;
-    let adminFunction = null;
-
+    // Handle admin commands
     for (let i = 0; i < messageCommands.adminCommands.length; i++) {
       let messageCommand = messageCommands.adminCommands[i];
 
-      if (messageLower.startsWith(messageCommand.command.toLowerCase())) {
-        adminCommand = messageCommand.command;
-        adminFunction = messageCommand.fn;
-        break;
-      }
-    }
+      for (let j = 0; j < messageCommand.command.length; j++) {
+        let commandString = messageCommand.command[j];
 
-    if (!userCommandExecuted && adminCommand && adminFunction) {
-      if (ADMIN_ROLE_ID) {
-        if ((message.member as GuildMember).roles.cache.has(ADMIN_ROLE_ID)) {
-          let msgArgv = parseArgv(messageTrim.slice(adminCommand.length));
+        if (messageLower.startsWith(commandString.toLowerCase())) {
+          if (!userCommandExecuted) {
+            if (ADMIN_ROLE_ID) {
+              if (
+                (message.member as GuildMember).roles.cache.has(ADMIN_ROLE_ID)
+              ) {
+                let msgArgv = parseArgv(
+                  messageTrim.slice(commandString.length)
+                );
 
-          adminFunction(message, msgArgv);
-        } else {
-          message.reply("You do not have permission to use the command");
+                messageCommand.fn(message, msgArgv);
+              } else {
+                message.reply("You do not have permission to use the command");
+              }
+            } else {
+              message.reply(
+                "`ADMIN_ROLE_ID` environment variable is not defined"
+              );
+            }
+            adminCommandExecuted = true;
+          }
         }
-      } else {
-        message.reply("`ADMIN_ROLE_ID` environment variable is not defined");
       }
-      adminCommandExecuted = true;
+
+      if (adminCommandExecuted) break;
     }
 
+    // Handle message contains
     if (!userCommandExecuted && !adminCommandExecuted) {
       for (let i = 0; i < messageContains.length; i++) {
         let messageContain = messageContains[i];
