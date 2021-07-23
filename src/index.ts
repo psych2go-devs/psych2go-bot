@@ -47,6 +47,12 @@ if (!process.env.BOT_TOKEN)
   // check if `BOT_TOKEN` environment variable is defined
   destroyClientAndExit();
 
+export const DEV_ROLE_IDS = (
+  process.env.DEV_ROLE_ID ? process.env.DEV_ROLE_ID : ""
+)
+  .split(",")
+  .filter((v) => v)
+  .map((v) => v.trim());
 export const ADMIN_ROLE_IDS = (
   process.env.ADMIN_ROLE_ID ? process.env.ADMIN_ROLE_ID : ""
 )
