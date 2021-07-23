@@ -17,7 +17,7 @@ export const messageCommands: MessageCommands = {
     {
       command: "hi psi",
       fn: (message, argv) => {
-        if (!argv.length) message.reply("hey psych2goer!");
+        message.reply("hey psych2goer!");
       }
     }
   ],
