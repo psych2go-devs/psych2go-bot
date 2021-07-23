@@ -10,7 +10,7 @@ export const messageContains: MessageContains = [
   {
     contain: ["cookie"],
     fn: (message: Message, match: string) => {
-      message.react("cookie");
+      message.react(":cookie:");
     }
   }
 ];
