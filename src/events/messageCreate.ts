@@ -1,5 +1,6 @@
 import { GuildMember, Message, Snowflake } from "discord.js";
 import { ADMIN_ROLE_IDS, DEV_ROLE_IDS } from "..";
+import { handlerMessages } from "../commands/allMessages";
 import { messageCommands } from "../commands/messageCommands";
 import { messageContains } from "../commands/messageContains";
 import parseArgv from "../functions/parseArgv";
@@ -13,6 +14,8 @@ export const handleMessageCreateEvent = (message: Message) => {
     let userCommandExecuted = false;
     let devCommandExecuted = false;
     let adminCommandExecuted = false;
+
+    handlerMessages(message);
 
     // Handle user commands
     for (let i = 0; i < messageCommands.userCommands.length; i++) {
