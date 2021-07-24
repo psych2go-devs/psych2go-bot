@@ -17,6 +17,15 @@ const commandPrefix = "psi!"; // This shouldn't be hard-coded, but anyway
 let currentCommitHash = execSync("git rev-parse --short HEAD")
   .toString()
   .trim();
+let currentCommitSubject = execSync('git log --format="%s" -n 1')
+  .toString()
+  .trim();
+let currentCommitBody = execSync('git log --format="%b" -n 1')
+  .toString()
+  .trim();
+let currentCommitAuthorName = execSync('git log --format="%an" -n 1')
+  .toString()
+  .trim();
 
 export const messageCommands: MessageCommands = {
   userCommands: [
@@ -66,7 +75,14 @@ export const messageCommands: MessageCommands = {
       command: [commandPrefix + "version", commandPrefix + "ver"],
       fn: (message, argv) => {
         if (!argv.length)
-          message.reply(`Currently on commit \`${currentCommitHash}\``);
+          message.reply({
+            embeds: [
+              {
+                color: 16777215,
+                description: `**Currently on commit \`${currentCommitHash}\`**\n${currentCommitSubject} - ${currentCommitAuthorName}`
+              }
+            ]
+          });
       }
     },
     {
