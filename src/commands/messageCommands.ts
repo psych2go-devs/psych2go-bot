@@ -32,6 +32,12 @@ export const messageCommands: MessageCommands = {
         if (!argv.length)
           message.reply(`Currently on commit \`${currentCommitHash}\``);
       }
+    },
+    {
+      command: [commandPrefix + "i love pink"],
+      fn: (message) => {
+        message.reply("I love pink!\n- Lexi");
+      }
     }
   ],
   devCommands: [],
