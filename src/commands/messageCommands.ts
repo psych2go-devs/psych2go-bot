@@ -14,8 +14,48 @@ interface MessageCommands {
 
 const commandPrefix = "psi!"; // This shouldn't be hard-coded, but anyway
 
+let currentCommitHash = execSync("git rev-parse --short HEAD")
+  .toString()
+  .trim();
+
 export const messageCommands: MessageCommands = {
   userCommands: [
+    {
+      command: [commandPrefix + "help"],
+      fn: (message) => {
+        message.reply({
+          embeds: [
+            {
+              color: 16777215,
+              fields: [
+                {
+                  name: "Community Psi Bot",
+                  value: "List of commands"
+                },
+                {
+                  name: "User Commands",
+                  value: `\`\`\`${commandPrefix}help\n${commandPrefix}[version|ver]\`\`\``,
+                  inline: true
+                },
+                {
+                  name: "Dev commands",
+                  value: `\`\`\`${commandPrefix}eval\`\`\``,
+                  inline: true
+                },
+                {
+                  name: "Admin commands",
+                  value: `\`\`\`${commandPrefix}bomb\`\`\``,
+                  inline: true
+                }
+              ],
+              footer: {
+                text: `Currently on commit ${currentCommitHash}`
+              }
+            }
+          ]
+        });
+      }
+    },
     {
       command: ["hi psi", "hey psi", "hello psi"],
       fn: (message) => {
@@ -25,10 +65,6 @@ export const messageCommands: MessageCommands = {
     {
       command: [commandPrefix + "version", commandPrefix + "ver"],
       fn: (message, argv) => {
-        let currentCommitHash = execSync("git rev-parse --short HEAD")
-          .toString()
-          .trim();
-
         if (!argv.length)
           message.reply(`Currently on commit \`${currentCommitHash}\``);
       }
