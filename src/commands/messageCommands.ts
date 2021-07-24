@@ -40,7 +40,25 @@ export const messageCommands: MessageCommands = {
       }
     }
   ],
-  devCommands: [],
+  devCommands: [
+    {
+      command: [commandPrefix + "eval"],
+      fn: (message, argv) => {
+        if (!argv.length) {
+          return message.reply(`Usage: ${commandPrefix}eval <code>`);
+        }
+
+        try {
+          let evalOutput = JSON.stringify(eval(argv.join(" ").trim()));
+
+          if (evalOutput) message.reply(evalOutput);
+          else message.reply("*(no output)*");
+        } catch (error) {
+          message.reply(error.message);
+        }
+      }
+    }
+  ],
   adminCommands: [
     {
       command: [commandPrefix + "bomb"],
