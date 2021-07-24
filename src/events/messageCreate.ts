@@ -136,6 +136,11 @@ export const handleMessageCreateEvent = (message: Message) => {
 
     // Handle message contains
     if (!userCommandExecuted && !adminCommandExecuted) {
+      let messageLowerNoEmoji = messageLower.replace(
+        /:[^:\s]*(?:::[^:\s]*)*:/g,
+        ""
+      ); // https://stackoverflow.com/a/49783944
+
       for (let i = 0; i < messageContains.length; i++) {
         let messageContain = messageContains[i];
         let containFunction = null;
@@ -144,7 +149,7 @@ export const handleMessageCreateEvent = (message: Message) => {
         for (let j = 0; j < messageContain.contain.length; j++) {
           containString = messageContain.contain[j];
 
-          if (messageLower.includes(containString.toLowerCase())) {
+          if (messageLowerNoEmoji.includes(containString.toLowerCase())) {
             containFunction = messageContain.fn;
             break;
           }
