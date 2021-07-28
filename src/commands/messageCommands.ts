@@ -90,6 +90,20 @@ export const messageCommands: MessageCommands = {
       fn: (message) => {
         message.reply("I love pink!\n- Lexi");
       }
+    },
+    {
+      command: ["hotlines"],
+      fn: (message, argv) => {
+        if (!argv.length)
+        message.reply({
+          embeds: [
+            {
+              color: 16777215,
+              description: `**List of countries:**\nAfghanistan :flag_af:`
+            }
+          ]
+        });
+      }
     }
   ],
   devCommands: [
