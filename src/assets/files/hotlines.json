@@ -1,0 +1,645 @@
+[
+  {
+    "name": "Afghanistan",
+    "alias": ["af"],
+    "flag": "af",
+    "lines": ["119 (National Emergency)"]
+  },
+  {
+    "name": "Albania",
+    "alias": ["al"],
+    "flag": "al",
+    "lines": ["116000 (Children)"]
+  },
+  {
+    "name": "Algeria",
+    "alias": ["dz"],
+    "flag": "dz",
+    "lines": [
+      "34342 (National Emergency #)",
+      "43 (National Emergency #)",
+      "0021 3983 2000 58"
+    ]
+  },
+  {
+    "name": "Andorra",
+    "alias": ["ad"],
+    "flag": "ad",
+    "lines": ["112 (National Emergency)"]
+  },
+  {
+    "name": "Angola",
+    "alias": ["ao"],
+    "flag": "ao",
+    "lines": ["113 (National Emergency)"]
+  },
+  {
+    "name": "Antigua and Barbuda",
+    "alias": ["antigua", "barbuda", "ag"],
+    "flag": "ag",
+    "lines": ["463-5555 (Sexual Violence Hotline)"]
+  },
+  {
+    "name": "Argentina",
+    "alias": ["ar"],
+    "flag": "ar",
+    "lines": [
+      "135 (Greater Buenos Aires)",
+      "5275-1135",
+      "4783–8888 (\"SOS Un Amigo Anonimo\")"
+    ]
+  },
+  {
+    "name": "Armenia",
+    "alias": ["am"],
+    "flag": "am",
+    "lines": [
+      "911 (National Emergency #)",
+      "112 (National Emergency #)",
+      "(2) 538194"
+    ]
+  },
+  {
+    "name": "Australia",
+    "alias": ["au"],
+    "flag": "au",
+    "lines": [
+      "13 11 14",
+      "1800 55 1800 (Kids)",
+      "1300 22 4636",
+      "1300 659 467",
+      "1300 78 99 78 (Mens)",
+      "1800 008 255"
+    ]
+  },
+  {
+    "name": "Austria",
+    "alias": ["at"],
+    "flag": "at",
+    "lines": ["112 (National Emergency #)", "142", "147 (Kids)"]
+  },
+  {
+    "name": "Azerbaijan",
+    "alias": ["az"],
+    "flag": "az",
+    "lines": ["112 (National Emergency #)", "510-66-36"]
+  },
+  {
+    "name": "The Bahamas",
+    "alias": ["bahamas", "bs"],
+    "flag": "bs",
+    "lines": ["911 (National Emergency #)", "(2) 322-2763"]
+  },
+  {
+    "name": "Bahrain",
+    "alias": ["bh"],
+    "flag": "bh",
+    "lines": ["999 (National Emergency #)"]
+  },
+  {
+    "name": "Bangladesh",
+    "description": "http://shuni.org/ (Helpline)",
+    "alias": ["bd"],
+    "flag": "bd",
+    "lines": ["999 (National Emergency #)"]
+  },
+  {
+    "name": "Barbados",
+    "alias": ["bb"],
+    "flag": "bb",
+    "lines": [
+      "211 (Police)",
+      "511 (Ambulance)",
+      "311 (Firefighters)",
+      "(246) 4299999"
+    ]
+  },
+  {
+    "name": "Belarus",
+    "description": "minzdrav.gov.by",
+    "alias": ["by"],
+    "flag": "by",
+    "lines": [
+      "112 (National Emergency)",
+      "102 (Police)",
+      "103 (Ambulance)",
+      "8 801 100 8 801 (Violence at home) (anonymous, 24/7)",
+      "801-100-1611 (Children) (anonymous, 24/7)"
+    ]
+  },
+  {
+    "name": "Belgium",
+    "alias": ["be"],
+    "flag": "be",
+    "lines": ["911 (National Emergency #)", "1813"]
+  },
+  {
+    "name": "Belize",
+    "alias": ["bz"],
+    "flag": "bz",
+    "lines": ["911 (National Emergency)"]
+  },
+  {
+    "name": "Benin",
+    "alias": ["bj"],
+    "flag": "bj",
+    "lines": ["117 (National Emergency)"]
+  },
+  { "name": "Bhutan", "alias": ["bt"], "flag": "bt", "lines": ["112"] },
+  {
+    "name": "Bolivia",
+    "alias": ["bo"],
+    "flag": "bo",
+    "lines": ["911 (National Emergency #)", "3911270"]
+  },
+  {
+    "name": "Bosnia and Herzegovina",
+    "alias": ["bosnia", "herzegovina", "ba"],
+    "flag": "ba",
+    "lines": ["080 05 03 05"]
+  },
+  {
+    "name": "Botswana",
+    "alias": ["bw"],
+    "flag": "bw",
+    "lines": ["911 (National Emergency #)", "3911270"]
+  },
+  {
+    "name": "Brazil",
+    "description": "https://www.opencounseling.com/hotlines-br",
+    "alias": ["br"],
+    "flag": "br",
+    "lines": [
+      "188 (National Emergency #)",
+      "90035191",
+      "55 11 31514109 (Sau Paulo)",
+      "(91) 3223-0074 (Belém)",
+      "(31) 334-4111 (Belo Horizonte)",
+      "(65) 321 4111 (Cuiaba)",
+      "(21) 233 9191 (Rio de Janeiro)",
+      "(21) 236 0536 (Copacabana)"
+    ]
+  },
+  {
+    "name": "Brunei",
+    "alias": ["bn"],
+    "flag": "bn",
+    "lines": ["991 (Ambulances)", "993 (Police)", "145"]
+  },
+  {
+    "name": "Bulgaria",
+    "alias": ["bg"],
+    "flag": "bg",
+    "lines": ["112 (National Emergency #)", "0035 9249 17 223"]
+  },
+  {
+    "name": "Burkina Faso",
+    "alias": ["burkina", "faso", "bf"],
+    "flag": "bf",
+    "lines": ["17 (National Emergency)"]
+  },
+  {
+    "name": "Burundi",
+    "alias": ["bi"],
+    "flag": "bi",
+    "lines": ["117 (National Emergency)"]
+  },
+  {
+    "name": "Cape Verde",
+    "alias": ["cv"],
+    "flag": "cv",
+    "lines": ["132 (National Emergency)"]
+  },
+  {
+    "name": "Cambodja (Cambodia)",
+    "alias": ["cambodja", "cambodia", "kh"],
+    "flag": "kh",
+    "lines": ["855 17 222 372 (Chatbot Suicide Prevention)"]
+  },
+  {
+    "name": "Cameroon",
+    "alias": ["cm"],
+    "flag": "cm",
+    "lines": ["17117 (National Emergency)"]
+  },
+  {
+    "name": "Canada",
+    "description": "https://www.opencounseling.com/hotlines-ca\nhttps://www.opencounseling.com/ca-directory",
+    "alias": ["ca"],
+    "flag": "ca",
+    "lines": [
+      "911 (National Emergency #)",
+      "1 (833) 456 4566",
+      "1 (800) 668 6868 (Kids)",
+      "1 (855) 242 3310",
+      "1 (866) 925 4419 (Former Residential School Students)",
+      "1 (877) 330 6366 (Transgenders)",
+      "1 (866) 531 2600 (Ontario)",
+      "416-408-HELP (4357) (Toronto)",
+      "(02) 6311 1 (Toronto?)"
+    ]
+  },
+  {
+    "name": "Central African Republic",
+    "alias": ["african", "cf"],
+    "flag": "cf",
+    "lines": ["611253 (National Emergency)"]
+  },
+  {
+    "name": "Chad",
+    "alias": ["ro"],
+    "flag": "ro",
+    "lines": ["17 (National Emergency)"]
+  },
+  {
+    "name": "Chile",
+    "description": "https://gob.cl/saludablemente\nhttps://todomejora.org/apoyo/",
+    "alias": ["Chile", "cl"],
+    "flag": "cl",
+    "lines": ["600 360 7777", "5698 2481 971", "5622 2442 533"]
+  },
+  {
+    "name": "China",
+    "alias": ["China", "cn"],
+    "flag": "cn",
+    "lines": ["110 (National Emergency #)", "800-810-1117"]
+  },
+  {
+    "name": "Colombia",
+    "alias": ["Colombia", "co"],
+    "flag": "co",
+    "lines": [
+      "-  1(00 57 5) 372 27 27 (Baranquilla)",
+      "(57-1) 323 24 25 (Bogota)"
+    ]
+  },
+  {
+    "name": "Comoros",
+    "alias": ["Comoros", "km"],
+    "flag": "km",
+    "lines": ["Hotlines not found."]
+  },
+  {
+    "name": "Congo (Congo-Brazzaville)",
+    "alias": [
+      "Congo (Congo-Brazzaville)",
+      "Congo",
+      "Congo-Brazzaville",
+      "Brazzaville",
+      "cg"
+    ],
+    "flag": "cg",
+    "lines": ["112 (National Emergency)"]
+  },
+  {
+    "name": "Costa Rica",
+    "alias": ["Costa Rica", "Costa", "Rica", "cr"],
+    "flag": "cr",
+    "lines": ["506-253-5439 (Suicide Hotline)"]
+  },
+  {
+    "name": "Croatia",
+    "description": "https://www.opencounseling.com/hotlines-hr",
+    "alias": ["Croatia", "hr"],
+    "flag": "hr",
+    "lines": [" 112 (National Emergency #)", "(01) 4833-888"]
+  },
+  {
+    "name": "Cuba",
+    "alias": ["Cuba", "cu"],
+    "flag": "cu",
+    "lines": [
+      "532 348 14 49 (Suicide Hotline)",
+      "104 (Ambulance)",
+      "105 (Fire)",
+      "106 (Police)"
+    ]
+  },
+  {
+    "name": "Cyprus",
+    "alias": ["Cyprus", "cy"],
+    "flag": "cy",
+    "lines": ["112 (National Emergency #)", "8000 7773"]
+  },
+  {
+    "name": "Czech Republic",
+    "alias": ["Czech Republic", "Czech", "cz"],
+    "flag": "cz",
+    "lines": ["112 (National Emergency #)"]
+  },
+  {
+    "name": "Democratic Republic of the Congo",
+    "alias": [
+      "Democratic Republic of the Congo",
+      "Congo",
+      "cd",
+      "republic congo",
+      "republic of the congo",
+      "democratic congo"
+    ],
+    "flag": "cd",
+    "lines": ["112 (National Emergency)"]
+  },
+  {
+    "name": "Denmark",
+    "alias": ["Denmark", "dk"],
+    "flag": "dk",
+    "lines": ["112 (National Emergency #)", "4570201201"]
+  },
+  {
+    "name": "Djibouti",
+    "alias": ["Djibouti", "dj"],
+    "flag": "dj",
+    "lines": ["17 (National Emergency)"]
+  },
+  {
+    "name": "Dominica",
+    "alias": ["Dominica", "dm"],
+    "flag": "dm",
+    "lines": ["999 (National Emergency)"]
+  },
+  {
+    "name": "Dominican Republic",
+    "alias": ["Dominican Republic", "Dominican", "do"],
+    "flag": "do",
+    "lines": ["911 (National Emergency)"]
+  },
+  {
+    "name": "Ecuador",
+    "description": "http://www.telefonoamigo.org/",
+    "alias": ["Ecuador", "ec"],
+    "flag": "ec",
+    "lines": [
+      "911 (National Emergency)",
+      "(02)2906030 (9am-1pm) (3pm-11pm)",
+      "(02)2906060 (9am-1pm) (3pm-11pm) ",
+      "(03) 2822225 (Monday-Friday/2:30pm-9:30pm)"
+    ]
+  },
+  {
+    "name": "Egypt",
+    "description": "https://www.opencounseling.com/hotlines-eg",
+    "alias": ["Egypt", "eg"],
+    "flag": "eg",
+    "lines": [
+      "122 (National Emergency #)",
+      "762 1602",
+      "762 2381",
+      "41 (0) 27 321 21 21"
+    ]
+  },
+  {
+    "name": "El Salvador",
+    "alias": ["El Salvador", "Salvador", "sv"],
+    "flag": "sv",
+    "lines": ["911 (National Emergency)"]
+  },
+  {
+    "name": "Equatorial Guinea",
+    "alias": ["Equatorial Guinea", "Guinea", "gq"],
+    "flag": "gq",
+    "lines": ["114 (National Emergency)"]
+  },
+  {
+    "name": "Eritrea",
+    "alias": ["Eritrea", "er"],
+    "flag": "er",
+    "lines": ["12-77-99 (National Emergency)"]
+  },
+  {
+    "name": "Estonia",
+    "alias": ["Estonia", "ee"],
+    "flag": "ee",
+    "lines": [
+      "112 (National Emergency #)",
+      "3726558088",
+      "3726555688 (Russian)"
+    ]
+  },
+  {
+    "name": "Eswatini (Swaziland)",
+    "alias": ["Eswatini (Swaziland)", "Eswatini", "Swaziland", "sz"],
+    "flag": "sz",
+    "lines": ["999 (National Emergency)"]
+  },
+  {
+    "name": "Ethiopia",
+    "alias": ["Ethiopia", "et"],
+    "flag": "et",
+    "lines": ["997", "991"]
+  },
+  {
+    "name": "Fiji",
+    "alias": ["Fiji", "fj"],
+    "flag": "fj",
+    "lines": ["917 (National Emergency #)", "132454"]
+  },
+  {
+    "name": "Finland",
+    "alias": ["Finland", "fi"],
+    "flag": "fi",
+    "lines": ["112 (National Emergency #)", "010 195 202"]
+  },
+  {
+    "name": "France",
+    "description": "https://www.opencounseling.com/hotlines-fr",
+    "alias": ["France", "fr"],
+    "flag": "fr",
+    "lines": [
+      "- 112 (National Emergency #)",
+      "0145394000",
+      "01 46 21 46 46 (Boulogne)",
+      "01 45 39 40 00 (Paris)",
+      "0800 235 236 (Paris)",
+      "(+33) (0)1 40 09 15 22 (Paris)"
+    ]
+  },
+  {
+    "name": "Gabon",
+    "alias": ["Gabon", "ga"],
+    "flag": "ga",
+    "lines": ["1730 (National Emergency)"]
+  },
+  {
+    "name": "Gambia",
+    "alias": ["Gambia", "gm"],
+    "flag": "gm",
+    "lines": ["17"]
+  },
+  {
+    "name": "Georgia",
+    "alias": ["Georgia", "ge"],
+    "flag": "ge",
+    "lines": ["Hotlines not found."]
+  },
+  {
+    "name": "Germany",
+    "description": "https://www.opencounseling.com/hotlines-de",
+    "alias": ["Germany", "de", "Deutschland"],
+    "flag": "de",
+    "lines": [
+      "112 (National Emergency #)",
+      "08001810771",
+      "030-44 01 06 07",
+      "030-44 01 06 06 (Russian)",
+      "0800 1110 111",
+      "0800 1110 222"
+    ]
+  },
+  {
+    "name": "Ghana",
+    "alias": ["Ghana", "gh"],
+    "flag": "gh",
+    "lines": ["999 (National Emergency #)", "2332 444 71279"]
+  },
+  {
+    "name": "Greece",
+    "alias": ["Greece", "gr"],
+    "flag": "gr",
+    "lines": [
+      "1018",
+      "112 (National Emergency #)",
+      "100 (Police)",
+      "1056 (Children)",
+      "15900 (Family Policy and Gender Equality)",
+      "11528 (LGBT community)"
+    ]
+  },
+  {
+    "name": "Greenland",
+    "alias": ["Greenland", "gl"],
+    "flag": "gl",
+    "lines": ["134 (National Emergency #)"]
+  },
+  {
+    "name": "Grenada",
+    "alias": ["Grenada", "gd"],
+    "flag": "gd",
+    "lines": ["911", "439-1231"]
+  },
+  {
+    "name": "Guatemala",
+    "alias": ["Guatemala", "gt"],
+    "flag": "gt",
+    "lines": ["110 (National Emergency)"]
+  },
+  {
+    "name": "Guinea",
+    "alias": ["Guinea", "gn"],
+    "flag": "gn",
+    "lines": ["Hotlines not found."]
+  },
+  {
+    "name": "Guinea-Bissau",
+    "alias": ["Guinea-Bissau", "Guinea", "Bissau", "gw"],
+    "flag": "gw",
+    "lines": ["117 (National Emergency)"]
+  },
+  {
+    "name": "Guyana",
+    "alias": ["Guyana", "gy"],
+    "flag": "gy",
+    "lines": ["999 (National Emergency #)", "223-0001"]
+  },
+  {
+    "name": "Haiti",
+    "alias": ["Haiti", "ht"],
+    "flag": "ht",
+    "lines": ["114 (National Emergency)"]
+  },
+  {
+    "name": "Holy See (Vatican City)",
+    "alias": ["Holy See", "Vatican City", "Vatican", "va"],
+    "flag": "va",
+    "lines": ["113 (National Emergency)"]
+  },
+  {
+    "name": "Holland (Netherlands)",
+    "alias": ["Holland", "Netherlands", "nl"],
+    "flag": "nl",
+    "lines": ["09000767"]
+  },
+  {
+    "name": "Honduras",
+    "alias": ["Honduras", "hn"],
+    "flag": "hn",
+    "lines": ["(00 504) 2558 08 08 (Telefono de la Esperanza)"]
+  },
+  {
+    "name": "Hong Kong",
+    "alias": ["Hong Kong", "Hong", "Kong", "hk"],
+    "flag": "hk",
+    "lines": [" 999 (National Emergency #)", "2896 0000", "2389 2222"]
+  },
+  {
+    "name": "Hungary",
+    "alias": ["Hungary", "hu"],
+    "flag": "hu",
+    "lines": [
+      "- 112 (National Emergency #)",
+      "116123",
+      "06 80 810-600",
+      "116-111 (Kids)"
+    ]
+  },
+  {
+    "name": "Iceland",
+    "alias": ["Iceland", "ice", "is"],
+    "flag": "is",
+    "lines": ["112 (National Emergency #)", "1717"]
+  },
+  {
+    "name": "India",
+    "description": "https://www.opencounseling.com/hotlines-in",
+    "alias": ["India", "in"],
+    "flag": "in",
+    "lines": [
+      "112 (National Emergency #)",
+      "9152987821",
+      "+91 8422984528 (Mumbai)",
+      "+91 8422984529 (Mumbai)",
+      "+91 8422984530 (Mumbai)",
+      "+91-22-27546669",
+      "+91 44 24640050",
+      "+91 80 2572 2573",
+      "+91 44 24640050"
+    ]
+  },
+  {
+    "name": "Indonesia",
+    "description": "https://www.opencounseling.com/hotlines-id",
+    "alias": ["Indonesia", "id"],
+    "flag": "id",
+    "lines": ["112 (National Emergency #)", "1-800-273-8255"]
+  },
+  {
+    "name": "Iran",
+    "alias": ["Iran", "ir"],
+    "flag": "ir",
+    "lines": [
+      "110 (Police)",
+      "115 (Ambulance)",
+      "1480 (The Iran National Organization of Well-Being - 6am-9am)"
+    ]
+  },
+  {
+    "name": "Iraq",
+    "alias": ["Iraq", "iq"],
+    "flag": "iq",
+    "lines": ["911 (National Emergency)", "112 (National Emergency)"]
+  },
+  {
+    "name": "Ireland",
+    "description": "http://www.samaritans.org\nhttps://text50808.ie/",
+    "alias": ["Ireland", "ie"],
+    "flag": "ie",
+    "lines": [
+      "112 (National Emergency)",
+      "999 (National Emergency)",
+      "116 123 ('Samaritans')",
+      "text HELLO to 50808 (national crisis-intervention text-message service)",
+      "1800 80 48 48 ('Aware' for mood conditions)",
+      "1800 66 66 66 ('Childline')"
+    ]
+  }
+]

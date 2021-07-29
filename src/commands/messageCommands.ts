@@ -1,5 +1,7 @@
-import { Message, TextChannel } from "discord.js";
+import hotlines from "../assets/files/hotlines.json";
+import { Message, MessageEmbed, TextChannel } from "discord.js";
 import { execSync } from "child_process";
+import _ from "lodash";
 
 interface MessageCommand {
   command: Array<string>;
@@ -35,7 +37,7 @@ export const messageCommands: MessageCommands = {
         message.reply({
           embeds: [
             {
-              color: 16777215,
+              color: 0xffffff,
               fields: [
                 {
                   name: "Community Psi Bot",
@@ -78,7 +80,7 @@ export const messageCommands: MessageCommands = {
           message.reply({
             embeds: [
               {
-                color: 16777215,
+                color: 0xffffff,
                 description: `**Currently on commit \`${currentCommitHash}\`**\n${currentCommitSubject} - ${currentCommitAuthorName}`
               }
             ]
@@ -94,15 +96,43 @@ export const messageCommands: MessageCommands = {
     {
       command: ["hotlines"],
       fn: (message, argv) => {
-        if (!argv.length)
-        message.reply({
-          embeds: [
-            {
-              color: 16777215,
-              description: `**List of countries:**\nAfghanistan :flag_af:`
+        let countryFound = false;
+
+        // Hotlines search goes here
+
+        if (!countryFound) {
+          let chunkedHotlines = _.chunk(hotlines, 10);
+          let chunkedHotline = chunkedHotlines[0];
+          let countriesEmbedMessage = new MessageEmbed({
+            color: 0xffffff,
+            description: `**List of countries [1/${chunkedHotlines.length}]**\n`
+          });
+
+          if (argv.length == 1) {
+            let page = parseInt(argv[0]);
+
+            if (!isNaN(page)) {
+              let minPage = Math.min(page, chunkedHotlines.length);
+              let selectedChunkedHotline = chunkedHotlines[minPage - 1];
+
+              if (selectedChunkedHotline) {
+                chunkedHotline = selectedChunkedHotline;
+                countriesEmbedMessage.description = `**List of countries [${minPage}/${chunkedHotlines.length}]**\n`;
+              }
             }
-          ]
-        });
+          }
+
+          countriesEmbedMessage.description += chunkedHotline
+            .map((hotline) => `${hotline.name} :flag_${hotline.flag}:`)
+            .join("\n");
+
+          countriesEmbedMessage.description +=
+            "\n\nUse `hotlines [country]` to find hotlines for a specific country\nUse `hotlines [page]` to see other pages";
+
+          message.reply({
+            embeds: [countriesEmbedMessage]
+          });
+        }
       }
     }
   ],

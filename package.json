@@ -23,9 +23,11 @@
   "dependencies": {
     "discord.js": "^13.0.0-dev.77784ac.1626696170",
     "dotenv": "^10.0.0",
+    "lodash": "^4.17.21",
     "typescript": "^4.3.5"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.171",
     "@types/node": "^16.3.3",
     "prettier": "^2.3.2"
   }
