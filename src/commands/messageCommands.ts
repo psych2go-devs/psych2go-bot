@@ -45,7 +45,7 @@ export const messageCommands: MessageCommands = {
                 },
                 {
                   name: "User Commands",
-                  value: `\`\`\`${commandPrefix}help\n${commandPrefix}[version|ver]\`\`\``,
+                  value: `\`\`\`${commandPrefix}hotlines [country|page]\n${commandPrefix}help\n${commandPrefix}[version|ver]\`\`\``,
                   inline: true
                 },
                 {
@@ -94,44 +94,81 @@ export const messageCommands: MessageCommands = {
       }
     },
     {
-      command: ["hotlines"],
+      command: [commandPrefix + "hotlines"],
       fn: (message, argv) => {
         let countryFound = false;
 
-        // Hotlines search goes here
+        if (argv.length) {
+          let searchString = argv.join(" ").trim().toLowerCase();
+
+          hotlines.map((hotline) => {
+            if (
+              hotline.name.toLowerCase() === searchString ||
+              hotline.alias.map((al) => al.toLowerCase()).includes(searchString)
+            ) {
+              let embedMessage = new MessageEmbed({
+                color: 0xffffff,
+                description: `**${hotline.name} :flag_${
+                  hotline.flag
+                }:**\n\n${hotline.lines.map((line) => "- " + line).join("\n")}`
+              });
+
+              if (hotline.description)
+                embedMessage.description += `\n\n${hotline.description}`;
+
+              message.reply({ embeds: [embedMessage] });
+              countryFound = true;
+            }
+          });
+        }
 
         if (!countryFound) {
-          let chunkedHotlines = _.chunk(hotlines, 10);
-          let chunkedHotline = chunkedHotlines[0];
-          let countriesEmbedMessage = new MessageEmbed({
-            color: 0xffffff,
-            description: `**List of countries [1/${chunkedHotlines.length}]**\n`
-          });
+          if ((argv.length && !isNaN(parseInt(argv[0]))) || !argv.length) {
+            let chunkedHotlines = _.chunk(hotlines, 10);
+            let chunkedHotline = chunkedHotlines[0];
+            let countriesEmbedMessage = new MessageEmbed({
+              color: 0xffffff,
+              description: `**List of countries [1/${chunkedHotlines.length}]**\n\n`
+            });
 
-          if (argv.length == 1) {
-            let page = parseInt(argv[0]);
+            if (argv.length == 1) {
+              let page = parseInt(argv[0]);
 
-            if (!isNaN(page)) {
-              let minPage = Math.min(page, chunkedHotlines.length);
-              let selectedChunkedHotline = chunkedHotlines[minPage - 1];
+              if (!isNaN(page)) {
+                let cappedPage = Math.min(
+                  Math.max(1, page),
+                  chunkedHotlines.length
+                );
+                let selectedChunkedHotline = chunkedHotlines[cappedPage - 1];
 
-              if (selectedChunkedHotline) {
-                chunkedHotline = selectedChunkedHotline;
-                countriesEmbedMessage.description = `**List of countries [${minPage}/${chunkedHotlines.length}]**\n`;
+                if (selectedChunkedHotline) {
+                  chunkedHotline = selectedChunkedHotline;
+                  countriesEmbedMessage.description = `**List of countries [${cappedPage}/${chunkedHotlines.length}]**\n\n`;
+                }
               }
             }
+
+            countriesEmbedMessage.description += chunkedHotline
+              .map((hotline) => `${hotline.name} :flag_${hotline.flag}:`)
+              .join("\n");
+
+            countriesEmbedMessage.description += `\n\nUse \`${commandPrefix}hotlines [country]\` to find hotlines for a specific country\nUse \`${commandPrefix}hotlines [page]\` to see other pages`;
+
+            message.reply({
+              embeds: [countriesEmbedMessage]
+            });
+          } else {
+            message.reply({
+              embeds: [
+                {
+                  color: 0xffffff,
+                  title: "Uh oh",
+                  description:
+                    "Cannot find the specified country. Please use country code or another keyword"
+                }
+              ]
+            });
           }
-
-          countriesEmbedMessage.description += chunkedHotline
-            .map((hotline) => `${hotline.name} :flag_${hotline.flag}:`)
-            .join("\n");
-
-          countriesEmbedMessage.description +=
-            "\n\nUse `hotlines [country]` to find hotlines for a specific country\nUse `hotlines [page]` to see other pages";
-
-          message.reply({
-            embeds: [countriesEmbedMessage]
-          });
         }
       }
     }
