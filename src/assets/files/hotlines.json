@@ -254,38 +254,35 @@
   {
     "name": "Chile",
     "description": "https://gob.cl/saludablemente\nhttps://todomejora.org/apoyo/",
-    "alias": ["Chile", "cl"],
+    "alias": ["chile", "cl"],
     "flag": "cl",
     "lines": ["600 360 7777", "5698 2481 971", "5622 2442 533"]
   },
   {
     "name": "China",
-    "alias": ["China", "cn"],
+    "alias": ["china", "cn"],
     "flag": "cn",
     "lines": ["110 (National Emergency #)", "800-810-1117"]
   },
   {
     "name": "Colombia",
-    "alias": ["Colombia", "co"],
+    "alias": ["colombia", "co"],
     "flag": "co",
-    "lines": [
-      "-  1(00 57 5) 372 27 27 (Baranquilla)",
-      "(57-1) 323 24 25 (Bogota)"
-    ]
+    "lines": ["1(00 57 5) 372 27 27 (Baranquilla)", "(57-1) 323 24 25 (Bogota)"]
   },
   {
     "name": "Comoros",
-    "alias": ["Comoros", "km"],
+    "alias": ["comoros", "km"],
     "flag": "km",
     "lines": ["Hotlines not found."]
   },
   {
     "name": "Congo (Congo-Brazzaville)",
     "alias": [
-      "Congo (Congo-Brazzaville)",
-      "Congo",
-      "Congo-Brazzaville",
-      "Brazzaville",
+      "congo (congo-brazzaville)",
+      "congo",
+      "congo-brazzaville",
+      "brazzaville",
       "cg"
     ],
     "flag": "cg",
@@ -293,20 +290,20 @@
   },
   {
     "name": "Costa Rica",
-    "alias": ["Costa Rica", "Costa", "Rica", "cr"],
+    "alias": ["costa rica", "costa", "rica", "cr"],
     "flag": "cr",
     "lines": ["506-253-5439 (Suicide Hotline)"]
   },
   {
     "name": "Croatia",
     "description": "https://www.opencounseling.com/hotlines-hr",
-    "alias": ["Croatia", "hr"],
+    "alias": ["croatia", "hr"],
     "flag": "hr",
-    "lines": [" 112 (National Emergency #)", "(01) 4833-888"]
+    "lines": ["112 (National Emergency #)", "(01) 4833-888"]
   },
   {
     "name": "Cuba",
-    "alias": ["Cuba", "cu"],
+    "alias": ["cuba", "cu"],
     "flag": "cu",
     "lines": [
       "532 348 14 49 (Suicide Hotline)",
@@ -317,21 +314,21 @@
   },
   {
     "name": "Cyprus",
-    "alias": ["Cyprus", "cy"],
+    "alias": ["cyprus", "cy"],
     "flag": "cy",
     "lines": ["112 (National Emergency #)", "8000 7773"]
   },
   {
     "name": "Czech Republic",
-    "alias": ["Czech Republic", "Czech", "cz"],
+    "alias": ["czech republic", "czech", "cz"],
     "flag": "cz",
     "lines": ["112 (National Emergency #)"]
   },
   {
     "name": "Democratic Republic of the Congo",
     "alias": [
-      "Democratic Republic of the Congo",
-      "Congo",
+      "democratic republic of the congo",
+      "congo",
       "cd",
       "republic congo",
       "republic of the congo",
@@ -342,44 +339,44 @@
   },
   {
     "name": "Denmark",
-    "alias": ["Denmark", "dk"],
+    "alias": ["denmark", "dk"],
     "flag": "dk",
     "lines": ["112 (National Emergency #)", "4570201201"]
   },
   {
     "name": "Djibouti",
-    "alias": ["Djibouti", "dj"],
+    "alias": ["djibouti", "dj"],
     "flag": "dj",
     "lines": ["17 (National Emergency)"]
   },
   {
     "name": "Dominica",
-    "alias": ["Dominica", "dm"],
+    "alias": ["dominica", "dm"],
     "flag": "dm",
     "lines": ["999 (National Emergency)"]
   },
   {
     "name": "Dominican Republic",
-    "alias": ["Dominican Republic", "Dominican", "do"],
+    "alias": ["dominican republic", "dominican", "do"],
     "flag": "do",
     "lines": ["911 (National Emergency)"]
   },
   {
     "name": "Ecuador",
     "description": "http://www.telefonoamigo.org/",
-    "alias": ["Ecuador", "ec"],
+    "alias": ["ecuador", "ec"],
     "flag": "ec",
     "lines": [
       "911 (National Emergency)",
       "(02)2906030 (9am-1pm) (3pm-11pm)",
-      "(02)2906060 (9am-1pm) (3pm-11pm) ",
+      "(02)2906060 (9am-1pm) (3pm-11pm)",
       "(03) 2822225 (Monday-Friday/2:30pm-9:30pm)"
     ]
   },
   {
     "name": "Egypt",
     "description": "https://www.opencounseling.com/hotlines-eg",
-    "alias": ["Egypt", "eg"],
+    "alias": ["egypt", "eg"],
     "flag": "eg",
     "lines": [
       "122 (National Emergency #)",
@@ -390,25 +387,25 @@
   },
   {
     "name": "El Salvador",
-    "alias": ["El Salvador", "Salvador", "sv"],
+    "alias": ["el salvador", "salvador", "sv"],
     "flag": "sv",
     "lines": ["911 (National Emergency)"]
   },
   {
     "name": "Equatorial Guinea",
-    "alias": ["Equatorial Guinea", "Guinea", "gq"],
+    "alias": ["equatorial guinea", "guinea", "gq"],
     "flag": "gq",
     "lines": ["114 (National Emergency)"]
   },
   {
     "name": "Eritrea",
-    "alias": ["Eritrea", "er"],
+    "alias": ["eritrea", "er"],
     "flag": "er",
     "lines": ["12-77-99 (National Emergency)"]
   },
   {
     "name": "Estonia",
-    "alias": ["Estonia", "ee"],
+    "alias": ["estonia", "ee"],
     "flag": "ee",
     "lines": [
       "112 (National Emergency #)",
@@ -418,35 +415,35 @@
   },
   {
     "name": "Eswatini (Swaziland)",
-    "alias": ["Eswatini (Swaziland)", "Eswatini", "Swaziland", "sz"],
+    "alias": ["eswatini (swaziland)", "eswatini", "swaziland", "sz"],
     "flag": "sz",
     "lines": ["999 (National Emergency)"]
   },
   {
     "name": "Ethiopia",
-    "alias": ["Ethiopia", "et"],
+    "alias": ["ethiopia", "et"],
     "flag": "et",
     "lines": ["997", "991"]
   },
   {
     "name": "Fiji",
-    "alias": ["Fiji", "fj"],
+    "alias": ["fiji", "fj"],
     "flag": "fj",
     "lines": ["917 (National Emergency #)", "132454"]
   },
   {
     "name": "Finland",
-    "alias": ["Finland", "fi"],
+    "alias": ["finland", "fi"],
     "flag": "fi",
     "lines": ["112 (National Emergency #)", "010 195 202"]
   },
   {
     "name": "France",
     "description": "https://www.opencounseling.com/hotlines-fr",
-    "alias": ["France", "fr"],
+    "alias": ["france", "fr"],
     "flag": "fr",
     "lines": [
-      "- 112 (National Emergency #)",
+      "112 (National Emergency #)",
       "0145394000",
       "01 46 21 46 46 (Boulogne)",
       "01 45 39 40 00 (Paris)",
@@ -456,26 +453,26 @@
   },
   {
     "name": "Gabon",
-    "alias": ["Gabon", "ga"],
+    "alias": ["gabon", "ga"],
     "flag": "ga",
     "lines": ["1730 (National Emergency)"]
   },
   {
     "name": "Gambia",
-    "alias": ["Gambia", "gm"],
+    "alias": ["gambia", "gm"],
     "flag": "gm",
     "lines": ["17"]
   },
   {
     "name": "Georgia",
-    "alias": ["Georgia", "ge"],
+    "alias": ["georgia", "ge"],
     "flag": "ge",
     "lines": ["Hotlines not found."]
   },
   {
     "name": "Germany",
     "description": "https://www.opencounseling.com/hotlines-de",
-    "alias": ["Germany", "de", "Deutschland"],
+    "alias": ["germany", "de", "deutschland"],
     "flag": "de",
     "lines": [
       "112 (National Emergency #)",
@@ -488,13 +485,13 @@
   },
   {
     "name": "Ghana",
-    "alias": ["Ghana", "gh"],
+    "alias": ["ghana", "gh"],
     "flag": "gh",
     "lines": ["999 (National Emergency #)", "2332 444 71279"]
   },
   {
     "name": "Greece",
-    "alias": ["Greece", "gr"],
+    "alias": ["greece", "gr"],
     "flag": "gr",
     "lines": [
       "1018",
@@ -507,76 +504,76 @@
   },
   {
     "name": "Greenland",
-    "alias": ["Greenland", "gl"],
+    "alias": ["greenland", "gl"],
     "flag": "gl",
     "lines": ["134 (National Emergency #)"]
   },
   {
     "name": "Grenada",
-    "alias": ["Grenada", "gd"],
+    "alias": ["grenada", "gd"],
     "flag": "gd",
     "lines": ["911", "439-1231"]
   },
   {
     "name": "Guatemala",
-    "alias": ["Guatemala", "gt"],
+    "alias": ["guatemala", "gt"],
     "flag": "gt",
     "lines": ["110 (National Emergency)"]
   },
   {
     "name": "Guinea",
-    "alias": ["Guinea", "gn"],
+    "alias": ["guinea", "gn"],
     "flag": "gn",
     "lines": ["Hotlines not found."]
   },
   {
     "name": "Guinea-Bissau",
-    "alias": ["Guinea-Bissau", "Guinea", "Bissau", "gw"],
+    "alias": ["guinea-bissau", "guinea", "bissau", "gw"],
     "flag": "gw",
     "lines": ["117 (National Emergency)"]
   },
   {
     "name": "Guyana",
-    "alias": ["Guyana", "gy"],
+    "alias": ["guyana", "gy"],
     "flag": "gy",
     "lines": ["999 (National Emergency #)", "223-0001"]
   },
   {
     "name": "Haiti",
-    "alias": ["Haiti", "ht"],
+    "alias": ["haiti", "ht"],
     "flag": "ht",
     "lines": ["114 (National Emergency)"]
   },
   {
     "name": "Holy See (Vatican City)",
-    "alias": ["Holy See", "Vatican City", "Vatican", "va"],
+    "alias": ["holy see", "vatican city", "vatican", "va"],
     "flag": "va",
     "lines": ["113 (National Emergency)"]
   },
   {
     "name": "Holland (Netherlands)",
-    "alias": ["Holland", "Netherlands", "nl"],
+    "alias": ["holland", "netherlands", "nl"],
     "flag": "nl",
     "lines": ["09000767"]
   },
   {
     "name": "Honduras",
-    "alias": ["Honduras", "hn"],
+    "alias": ["honduras", "hn"],
     "flag": "hn",
     "lines": ["(00 504) 2558 08 08 (Telefono de la Esperanza)"]
   },
   {
     "name": "Hong Kong",
-    "alias": ["Hong Kong", "Hong", "Kong", "hk"],
+    "alias": ["hong kong", "hong", "kong", "hk"],
     "flag": "hk",
-    "lines": [" 999 (National Emergency #)", "2896 0000", "2389 2222"]
+    "lines": ["999 (National Emergency #)", "2896 0000", "2389 2222"]
   },
   {
     "name": "Hungary",
-    "alias": ["Hungary", "hu"],
+    "alias": ["hungary", "hu"],
     "flag": "hu",
     "lines": [
-      "- 112 (National Emergency #)",
+      "112 (National Emergency #)",
       "116123",
       "06 80 810-600",
       "116-111 (Kids)"
@@ -584,14 +581,14 @@
   },
   {
     "name": "Iceland",
-    "alias": ["Iceland", "ice", "is"],
+    "alias": ["iceland", "ice", "is"],
     "flag": "is",
     "lines": ["112 (National Emergency #)", "1717"]
   },
   {
     "name": "India",
     "description": "https://www.opencounseling.com/hotlines-in",
-    "alias": ["India", "in"],
+    "alias": ["india", "in"],
     "flag": "in",
     "lines": [
       "112 (National Emergency #)",
@@ -608,13 +605,13 @@
   {
     "name": "Indonesia",
     "description": "https://www.opencounseling.com/hotlines-id",
-    "alias": ["Indonesia", "id"],
+    "alias": ["indonesia", "id"],
     "flag": "id",
     "lines": ["112 (National Emergency #)", "1-800-273-8255"]
   },
   {
     "name": "Iran",
-    "alias": ["Iran", "ir"],
+    "alias": ["iran", "ir"],
     "flag": "ir",
     "lines": [
       "110 (Police)",
@@ -624,14 +621,14 @@
   },
   {
     "name": "Iraq",
-    "alias": ["Iraq", "iq"],
+    "alias": ["iraq", "iq"],
     "flag": "iq",
     "lines": ["911 (National Emergency)", "112 (National Emergency)"]
   },
   {
     "name": "Ireland",
     "description": "http://www.samaritans.org\nhttps://text50808.ie/",
-    "alias": ["Ireland", "ie"],
+    "alias": ["ireland", "ie"],
     "flag": "ie",
     "lines": [
       "112 (National Emergency)",
@@ -641,5 +638,946 @@
       "1800 80 48 48 ('Aware' for mood conditions)",
       "1800 66 66 66 ('Childline')"
     ]
+  },
+  {
+    "name": "Israel",
+    "description": "https://www.eran.org.il/",
+    "alias": ["israel", "il"],
+    "flag": "il",
+    "lines": [
+      "100 (Police)",
+      "101 (Ambulance)",
+      "1201 / 972-9 8891333 ('Eran.org.il Suicide line')",
+      "076-88444-00 (Eran.org.il Suicide line's SMS service)"
+    ]
+  },
+  {
+    "name": "Italy",
+    "description": "http://www.prevenireilsuicidio.it/\nhttp://www.samaritansonlus.org/\nhttp://www.telefonoamico.it/",
+    "alias": ["italy", "it"],
+    "flag": "it",
+    "lines": [
+      "112 (National Emergency)",
+      "800 86 00 22 / 06 77208977 ('Samaritans - ONLUS' -  1pm to 10pm)",
+      "199 284 284 (Telefono Amico Italia - 10am to 12am)"
+    ]
+  },
+  {
+    "name": "Jamaica",
+    "alias": ["jamaica", "jm"],
+    "flag": "jm",
+    "lines": ["(876) 930-1152 ('Jamaica Suicide Hotline')"]
+  },
+  {
+    "name": "Japan",
+    "description": "http://www.spc-osaka.org/\nhttp://telljp.com/lifeline/",
+    "alias": ["japan", "jp"],
+    "flag": "jp",
+    "lines": [
+      "110 (Police)",
+      "119 (Ambulance)",
+      "03-5774-0992 ('TELL' - English-language Lifeline service)",
+      "06-6260-4343 ('Befrienders Worldwide Osaka Suicide Prevent Center' - Friday 1pm to Sunday 10pm)"
+    ]
+  },
+  {
+    "name": "Jordan",
+    "description": "https://www.jordanriver.jo/en/programs/protecting-children/110-families-children",
+    "alias": ["jordan", "jo"],
+    "flag": "jo",
+    "lines": [
+      "911 (National Emergency)",
+      "110 (Jordan River Foundation - Families & Children -  9am to 7pm)"
+    ]
+  },
+  {
+    "name": "Kazakhstan",
+    "alias": ["kazakhstan", "kz"],
+    "flag": "kz",
+    "lines": ["Hotlines not found"]
+  },
+  {
+    "name": "Kenya",
+    "alias": ["kenya", "ke"],
+    "flag": "ke",
+    "lines": [
+      "911 (National Emergency)",
+      "+254 722 178 177 ('Befrienders Kenya')",
+      "+254 20 3000378 / +254 20 2051323 ('Mental Health Department – Kenyatta Hospital')"
+    ]
+  },
+  {
+    "name": "Kiribati",
+    "alias": ["kiribati", "ki"],
+    "flag": "ki",
+    "lines": ["Hotlines not found"]
+  },
+  {
+    "name": "Kosovo",
+    "alias": ["kosovo", "xk"],
+    "flag": "xk",
+    "lines": ["080012345 (Suicide Prevention Hotline)"]
+  },
+  {
+    "name": "Kuwait",
+    "alias": ["kuwait", "kw"],
+    "flag": "kw",
+    "lines": ["Hotlines not found."]
+  },
+  {
+    "name": "Kyrgyzstan",
+    "alias": ["kyrgyzstan", "kg"],
+    "flag": "kg",
+    "lines": ["Hotlines not found."]
+  },
+  {
+    "name": "Laos",
+    "alias": ["laos", "la"],
+    "flag": "la",
+    "lines": ["21-2706 (National Emergency)"]
+  },
+  {
+    "name": "Latvia",
+    "description": "http://www.skalbes.lv/",
+    "alias": ["latvia", "lv"],
+    "flag": "lv",
+    "lines": [
+      "113 (National Emergency)",
+      "+371 67222922 / +371 27722292 (Monday to Friday)"
+    ]
+  },
+  {
+    "name": "Lebanon",
+    "description": "https://embracelebanon.org/",
+    "alias": ["lebanon", "lb"],
+    "flag": "lb",
+    "lines": [
+      "1564 (Suicide Hotline Lebanon - Embrace - local - 12 pm to 5:30 am on all weekdays.)",
+      "+961 1 341 941 (Suicide Hotline Lebanon - Embrace - international)"
+    ]
+  },
+  {
+    "name": "Lesotho",
+    "alias": ["lesotho", "ls"],
+    "flag": "ls",
+    "lines": ["123 (National Emergency)"]
+  },
+  {
+    "name": "Liberia",
+    "alias": ["liberia", "lr"],
+    "flag": "lr",
+    "lines": [
+      "911 (National Emergency)",
+      "6534308 (Lifeline Liberia counselling -  9am to 5pm Monday-Saturday)"
+    ]
+  },
+  {
+    "name": "Libya",
+    "alias": ["libya", "ly"],
+    "flag": "ly",
+    "lines": ["1515 (National Emergency)"]
+  },
+  {
+    "name": "Liechtenstein",
+    "alias": ["liechtenstein", "li"],
+    "flag": "li",
+    "lines": ["112 (National Emergency)"]
+  },
+  {
+    "name": "Lithuania",
+    "description": "https://www.viltieslinija.lt/\nhttps://www.vaikulinija.lt/\nhttps://www.jaunimolinija.lt/",
+    "alias": ["lithuania", "lt"],
+    "flag": "lt",
+    "lines": [
+      "116 123 ('Vilties Linija' - prevention of suicide and psychological crises - adults)",
+      "116 111  ('Vaikų liniją' - Childline - 11am to 11pm)",
+      "8 800 28888 ('Jaunimo linija' - Youth Line)"
+    ]
+  },
+  {
+    "name": "Luxembourg",
+    "description": "https://454545.lu/",
+    "alias": ["luxembourg", "lu"],
+    "flag": "lu",
+    "lines": [
+      "112 (National Emergency)",
+      "+352 45 45 45 ('SOS Distress' - 11am to 11pm on all weekdays and 11am-3am on Friday and Saturday)"
+    ]
+  },
+  {
+    "name": "Macedonia",
+    "alias": ["macedonia", "mk"],
+    "flag": "mk",
+    "lines": ["0800 1 22 22 ('Children's Embassy in the World MEZHACI')"]
+  },
+  {
+    "name": "Madagascar",
+    "alias": ["madagascar", "mg"],
+    "flag": "mg",
+    "lines": ["117 (National Emergency)"]
+  },
+  {
+    "name": "Malawi",
+    "alias": ["malawi", "mw"],
+    "flag": "mw",
+    "lines": ["999", "997"]
+  },
+  {
+    "name": "Malaysia",
+    "description": "http://www.befrienders.org.my/",
+    "alias": ["malaysia", "my"],
+    "flag": "my",
+    "lines": [
+      "999 (National Emergency)",
+      "03-79568144 / 03-79568145 / 603-79568145 ('National Council of Befrienders Malaysia')"
+    ]
+  },
+  {
+    "name": "Maldives",
+    "alias": ["maldives", "mv"],
+    "flag": "mv",
+    "lines": ["119 (National Emergency)"]
+  },
+  {
+    "name": "Mali",
+    "alias": ["mali", "ml"],
+    "flag": "ml",
+    "lines": ["17 (National Emergency)"]
+  },
+  {
+    "name": "Malta",
+    "alias": ["malta", "mt"],
+    "flag": "mt",
+    "lines": [
+      "112 (National Emergency)",
+      "179 ('Appogg Supportline 179' - information, support and referral to social service agencies)"
+    ]
+  },
+  {
+    "name": "Marshall Islands",
+    "alias": ["marshall islands", "marhsall", "islands", "mh"],
+    "flag": "mh",
+    "lines": ["Hotlines not found."]
+  },
+  {
+    "name": "Mauritania",
+    "alias": ["mauritania", "mr"],
+    "flag": "mr",
+    "lines": ["117 (National Emergency)"]
+  },
+  {
+    "name": "Mauritius",
+    "description": "http://www.suicide.org/hotlines/international/mauritius-suicide-hotlines.html",
+    "alias": ["mauritius", "mu"],
+    "flag": "mu",
+    "lines": [
+      "112 (Police)",
+      "114 (Ambulance)",
+      "+230 800 93 93 / 46 48 889('Befrienders Mauritius' - English and French - 9am to 9pm)",
+      "230 214 2451 ('Helpline Mauritius')"
+    ]
+  },
+  {
+    "name": "Mexico",
+    "description": "http://www.saptel.org.mx/index.html\nhttps://www.uam.mx/lineauam/lineauam_chat.htm",
+    "alias": ["mexico", "mx"],
+    "flag": "mx",
+    "lines": [
+      "911 (National Emergency)",
+      "(55) 5259-8121 ('SAPTEL' - mental health crisis)",
+      "(55) 5804-644 / (55) 5804-4879 ('UAM' - Monday to Friday)",
+      "(55) 5655-3080 / (800) 953-1704 ('Instituto Nacional de Psiquiatria')"
+    ]
+  },
+  {
+    "name": "Micronesia",
+    "alias": ["micronesia", "fm"],
+    "flag": "fm",
+    "lines": ["Hotlines not found."]
+  },
+  {
+    "name": "Moldova",
+    "alias": ["moldova", "md"],
+    "flag": "md",
+    "lines": [
+      "37360806623 ('Altruism Association Moldova' - Romanian and Russian - 12am to 5pm)"
+    ]
+  },
+  {
+    "name": "Monaco",
+    "alias": ["monaco", "mc"],
+    "flag": "mc",
+    "lines": ["112 (National Emergency)"]
+  },
+  {
+    "name": "Mongolia",
+    "alias": ["mongolia", "mn"],
+    "flag": "mn",
+    "lines": [
+      "105 (National Emergency)",
+      "(+976) 1800-2000 ('Mongolia Mental Health Hotline')"
+    ]
+  },
+  {
+    "name": "Montenegro",
+    "alias": ["montenegro", "me"],
+    "flag": "me",
+    "lines": ["112 (National Emergency)"]
+  },
+  {
+    "name": "Morocco",
+    "description": "https://www.sourire2reda.org/",
+    "alias": ["morocco", "ma"],
+    "flag": "ma",
+    "lines": [
+      "+212 (5) 22 87 47 40 ('Sourire de Reda - Befrienders Casablanca' - Landline - 09am to 5pm - Monday to Friday - French, Arabic)",
+      "+212 (6) 62 58 95 70 ('Sourire de Reda - Befrienders Casablanca' - Mobile - 09am to 5pm - Monday to Friday- French, Arabic)"
+    ]
+  },
+  {
+    "name": "Mozambique",
+    "alias": ["mozambique", "mz"],
+    "flag": "mz",
+    "lines": ["119 (National Emergency)"]
+  },
+  {
+    "name": "Myanmar (Burma)",
+    "alias": ["myanmar", "burma", "mm"],
+    "flag": "mm",
+    "lines": ["999", "119"]
+  },
+  {
+    "name": "Namibia",
+    "alias": ["namibia", "na"],
+    "flag": "na",
+    "lines": ["(09264) 61-232-221 ('LifeLine Namibia')"]
+  },
+  {
+    "name": "Nauru",
+    "alias": ["nauru", "nr"],
+    "flag": "nr",
+    "lines": ["Hotlines not found."]
+  },
+  {
+    "name": "Nepal",
+    "alias": ["nepal", "np"],
+    "flag": "np",
+    "lines": [
+      "100 / 112 (National Emergency)",
+      "1660-0133666 ('Mental Health Helpline Nepal' - 8am to 8pm)"
+    ]
+  },
+  {
+    "name": "New Zealand",
+    "description": "http://www.1737.org.nz/\nhttps://www.youthline.co.nz/\nhttps://thelowdown.co.nz/",
+    "alias": ["new zealand", "zealand", "nz"],
+    "flag": "nz",
+    "lines": [
+      "111 (National Emergency)",
+      "1737",
+      "09 5222 999 ('Lifeline Aotearoa' - Auckland)",
+      "0800 543 354 ('Lifeline Aotearoa')",
+      "0800 376 633 ('Youthline')",
+      "234 ('Youthline' - text)",
+      "5626 ('The Lowdown' - text)",
+      "0800 72 6666 ('Samaritans of Horowhenua')",
+      "(06) 586 1048 ('Samaritans of Manawatu')",
+      "(07) 350 2030 ('Samaritans Rotorua/Lifelink')"
+    ]
+  },
+  {
+    "name": "Nicaragua",
+    "alias": ["nicaragua", "ni"],
+    "flag": "ni",
+    "lines": [
+      "118 (Police)",
+      "115 (fixed line) /911 (cellphones) (Fire department)",
+      "128 (Red Cross Ambulance)",
+      "101 (English and Spanish - 24 hour help line for tourists)"
+    ]
+  },
+  {
+    "name": "Niger",
+    "alias": ["niger", "ne"],
+    "flag": "ne",
+    "lines": ["17 (National Emergency)"]
+  },
+  {
+    "name": "Nigeria",
+    "alias": ["nigeria", "ng"],
+    "flag": "ng",
+    "lines": [
+      "0800 800 8001 ('24 HOUR CHILDHELPLINE' - child sexual abuse)",
+      "08091116264 ('MANI' - mental health)"
+    ]
+  },
+  {
+    "name": "Niue",
+    "alias": ["niue", "nu"],
+    "flag": "nu",
+    "lines": ["Hotlines not found."]
+  },
+  {
+    "name": "Norway",
+    "alias": ["norway", "no"],
+    "flag": "no",
+    "lines": [
+      "112 (Police)",
+      "113 (Ambulance)",
+      "0047 22 40 00 40 ('Kirken SoS I Norge' -  emotional, existential crisis and suicide)",
+      "116 123 ('Mental Helse' - crisis, suicide and depression)"
+    ]
+  },
+  {
+    "name": "Oman",
+    "alias": ["oman", "om"],
+    "flag": "om",
+    "lines": ["999 / 112 (National Emergency)"]
+  },
+  {
+    "name": "Pakistan",
+    "alias": ["pakistan", "pk"],
+    "flag": "pk",
+    "lines": ["92 317 4288665 ('Umang Pakistan' - mental health)"]
+  },
+  {
+    "name": "Palau",
+    "alias": ["palau", "pw"],
+    "flag": "pw",
+    "lines": ["Hotlines not found."]
+  },
+  {
+    "name": "Palestine State",
+    "alias": ["palestine state", "palestine", "ps"],
+    "flag": "ps",
+    "lines": ["Hotlines not found."]
+  },
+  {
+    "name": "Panama",
+    "alias": ["panama", "pa"],
+    "flag": "pa",
+    "lines": ["911 (National Emergency)"]
+  },
+  {
+    "name": "Papua New Guinea",
+    "alias": ["papua new guinea", "papua", "guinea", "new guinea", "pg"],
+    "flag": "pg",
+    "lines": [
+      "675 326 0011 ('Lifeline Papua New Guinea' - suicide and distress)"
+    ]
+  },
+  {
+    "name": "Paraguay",
+    "alias": ["paraguay", "py"],
+    "flag": "py",
+    "lines": ["911 (National Emergency)"]
+  },
+  {
+    "name": "Peru",
+    "alias": ["peru", "pe"],
+    "flag": "pe",
+    "lines": ["(00 51 1) 273 8026 ('Telefono de la Esperanza')"]
+  },
+  {
+    "name": "Philippines",
+    "alias": ["philippines", "ph"],
+    "flag": "ph",
+    "lines": [
+      "(02) 8893-7603 (Landline - Suicide Crisis)",
+      "0917-8001123 (Globe - Suicide Crisis)",
+      "0917-8001123 (Sun - Suicide Crisis)",
+      "0939-9375433 / 0939-9365433  ('Tawag Paglaum-Centro Bisaya' suicide, depression, and emotional crisis intervention - SMART & SUN)",
+      "0927-6541629 ('Tawag Paglaum-Centro Bisaya' suicide, depression, and emotional crisis intervention - Globe / TM)",
+      "(02) 8525-1743 / (02) 8525-1881 ('Dial-a-Friend')",
+      "(02) 554-8400 / (02) 8526-0150 / (02) 554-8469 ('Philippine General Hospital PGH Psychiatry and Behavioral Medicine Department')",
+      "(02) 8426-5982 ('Ateneo Bulatao Center For Psychological Services Phone')",
+      "(02) 8421-2469 / (02) 8357-6427 ('Psych Consult, Inc')",
+      "(02) 8863-0655 / (0977) 795-3097 ('Prescription Psychiatrists and Psychologists')",
+      "(02) 8406-1611 / (0917) 322-7807 ('Free Psychological Services Living Free Foundation')"
+    ]
+  },
+  {
+    "name": "Poland",
+    "description": "http://telefonzaufania.org/\nhttps://fdds.pl/jak-pomagamy.html#jak-pomagamy",
+    "alias": ["poland", "polska", "pl"],
+    "flag": "pl",
+    "lines": [
+      "112 (National Emergency)",
+      "19288 89 19288 / 527 00 00 89 527 00 00 / 89 19288 / 89 527 00 00",
+      "('Olsztynski Telefon Zaufania 'Anonimowy Przyjaciel' - personal crisis)",
+      "111 116 111 (Foundation 'Dajemy Dzieciom Siłę' - children - crisis, home violence, or bullying - 12am to 2am)"
+    ]
+  },
+  {
+    "name": "Portugal",
+    "description": "http://sosestudante.pt/\nhttp://www.sosvozamiga.org/\nhttp://www.vozdeapoio.pt/\nhttp://sosestudante.pt/",
+    "alias": ["portugal", "pt"],
+    "flag": "pt",
+    "lines": [
+      "112 (National Emergency)",
+      "50 60 70 225 50 60 70 ('Voz de Apoio' - Skype, face-to-face, or writing)",
+      "213544545 / 912802660 / 963524660 / 544 545 213 544 545 / 802 669 912 802 669 / 524 660 963 524 660 ('SOS Voz Amiga' - 4pm to 12am)",
+      "246 060 915 246 060 / 554 545 969 554 545 / 484 020 239 484 020 ('Sos Estudante' -  8pm to 1am)"
+    ]
+  },
+  {
+    "name": "Puerto Rico",
+    "alias": ["puerto rico", "pr"],
+    "flag": "pr",
+    "lines": ["1-800-981-0023 ('Linea Pas' - depression and suicidal thoughts)"]
+  },
+  {
+    "name": "Qatar",
+    "alias": ["qatar", "qa"],
+    "flag": "qa",
+    "lines": ["999 / 112 (National Emergency)"]
+  },
+  {
+    "name": "Romania",
+    "description": "http://www.antisuicid.com/",
+    "alias": ["romania", "ro"],
+    "flag": "ro",
+    "lines": [
+      "112 (National Emergency)",
+      "0800 0800 20 / 0800 20 0800 0800 20 ('TelVerde antidepresie' -  anti-depression)"
+    ]
+  },
+  {
+    "name": "Russia",
+    "description": " http://migsovet.ru/",
+    "alias": ["russia", "ru"],
+    "flag": "ru",
+    "lines": [
+      "112 (National Emergency)",
+      "051 / 8495051 (Moscow)",
+      "(8202) 577-577 007 / (8202) 577-577 ('Samaritans (Cherepovets) 9am-9pm')",
+      "(495) 625 3101 ('Suicide helpline')"
+    ]
+  },
+  {
+    "name": "Rwanda",
+    "alias": ["rwanda", "rw"],
+    "flag": "rw",
+    "lines": ["112 (National Emergency)"]
+  },
+  {
+    "name": "St. Kitts and Nevis",
+    "alias": [
+      "st. kitts and nevis",
+      "st kitts and nevis",
+      "kitts and nevis",
+      "kitts",
+      "nevis",
+      "kn"
+    ],
+    "flag": "kn",
+    "lines": [
+      "09 8392 4005 ('Social Emergency and Crisis Cent' - psychological help)"
+    ]
+  },
+  {
+    "name": "St. Lucia",
+    "alias": ["st. lucia", "lc"],
+    "flag": "lc",
+    "lines": [
+      "1 758-453-1521 ('St Lucia Crisis Centre' - psychological support)"
+    ]
+  },
+  {
+    "name": "St. Vincent and the Grenadines",
+    "alias": [
+      "st. vincent and the grenadines",
+      "vincent and the grenadines",
+      "vincent",
+      "grenadines",
+      "vc"
+    ],
+    "flag": "vc",
+    "lines": ["999 / 911 (National Emergency)"]
+  },
+  {
+    "name": "Samoa",
+    "alias": ["samoa", "ws"],
+    "flag": "ws",
+    "lines": [
+      "800-5433 ('FA’ATAUA LE OLA (FLO) / SAMOA LIFELINE' - suicide and depression)"
+    ]
+  },
+  {
+    "name": "San Marino",
+    "alias": ["san marino", "sm"],
+    "flag": "sm",
+    "lines": ["113 (National Emergency)"]
+  },
+  {
+    "name": "São Tomé and Príncipe",
+    "alias": [
+      "são tomé and príncipe",
+      "são tomé e príncipe",
+      "tomé and príncipe",
+      "tomé e príncipe",
+      "tomé",
+      "príncipe",
+      "sao tome and principe",
+      "tome and principe",
+      "tome e principe",
+      "tome",
+      "principe",
+      "st"
+    ],
+    "flag": "st",
+    "lines": ["Hotlines not found."]
+  },
+  {
+    "name": "Saudi Arabia",
+    "alias": ["saudi arabia", "saudi", "arabia", "sa"],
+    "flag": "sa",
+    "lines": [
+      "920 03 33 60 ('Psychological Counseling Contact Center' - distress, crisis and suicide)"
+    ]
+  },
+  {
+    "name": "Senegal",
+    "alias": ["senegal", "sn"],
+    "flag": "sn",
+    "lines": ["17 (National Emergency)"]
+  },
+  {
+    "name": "Serbia",
+    "alias": ["serbia", "rs"],
+    "flag": "rs",
+    "lines": [
+      "0800 300 303 / (381) 21 6623 393 ('Centar SRCE Novi Sad' - crisis and suicide - 2pm to 11pm)"
+    ]
+  },
+  {
+    "name": "Seychelles",
+    "alias": ["seychelles", "sc"],
+    "flag": "sc",
+    "lines": ["999 (National Emergency)"]
+  },
+  {
+    "name": "Sierra Leone",
+    "alias": ["sierra leone", "sierra", "leone", "sl"],
+    "flag": "sl",
+    "lines": ["19 (National Emergency)"]
+  },
+  {
+    "name": "Singapore",
+    "alias": ["singapore", "sg"],
+    "flag": "sg",
+    "lines": [
+      "1800-221 444 ('Samaritans of Singapore' - crisis and suicide)",
+      "6389 2222 ('The Institute of Mental Health (Singapore)' -  mental health crisis or emergency)"
+    ]
+  },
+  {
+    "name": "Slovakia",
+    "alias": ["slovakia", "sk"],
+    "flag": "sk",
+    "lines": [
+      "0800 800 566 ('Helpline of Confidence' - crisis)",
+      "475 603 390 ('Spirala' - difficult life perioud and loneliness)"
+    ]
+  },
+  {
+    "name": "Slovenia",
+    "alias": ["slovenia", "si"],
+    "flag": "si",
+    "lines": [
+      "116 123 ('Zaupni telefon Samarijan in Sopotnik' - distress)",
+      "386 31 233 211 ('Ženska svetovalnica – krizni center' - self-help groups for women)"
+    ]
+  },
+  {
+    "name": "Solomon Islands",
+    "alias": ["solomon islands", "solomon", "islands", "sb"],
+    "flag": "sb",
+    "lines": ["Hotlines not found."]
+  },
+  {
+    "name": "Somalia",
+    "alias": ["somalia", "so"],
+    "flag": "so",
+    "lines": ["888 (National Emergency)"]
+  },
+  {
+    "name": "South Africa",
+    "alias": ["south africa", "south", "africa", "za"],
+    "flag": "za",
+    "lines": [
+      "0800 70 80 90 ('Adcock Ingram Depression and Anxiety Helpline' - distress and suicide)",
+      "0861 435 787 ('Akeso Crisis Helpline' - crisis and mental health information)",
+      "27 (0) 51 444 5000 ('Befrienders Bloemfontein' - emotional support)",
+      "0800 24 24 36 ('ChaiFM Helpline' - distress and personal difficulties)",
+      "0800 055 555 ('ChildLine')",
+      "0800 456 789 ('Cipla 24hr Mental Health Helpline' - distress and suicide)",
+      "0861 322 322 ('Lifeline South Africa' - stress and trauma)",
+      "0800 567 567 ('SADAG Suicide Prevention Line' - suicide)",
+      "0800 21 22 23 / 0800 12 13 14 ('South Africa Suicide Crisis Helpline')"
+    ]
+  },
+  {
+    "name": "South Korea",
+    "alias": ["south korea", "south", "korea", "kr"],
+    "flag": "kr",
+    "lines": [
+      "1566-2525 ('Counsel24' - depression and suicide)",
+      "1588-9191 ('Lifeline Korea' - depression and suicide)",
+      "1577-0199 ('Mental Health Center Crisis Counseling' - depression and suicide)",
+      "129 ('Ministry of Health & Welfare Call Center' - depressiona and suicide)"
+    ]
+  },
+  {
+    "name": "South Sudan",
+    "alias": ["south sudan", "south", "sudan", "ss"],
+    "flag": "ss",
+    "lines": ["999 (National Emergency)"]
+  },
+  {
+    "name": "Spain",
+    "alias": ["spain", "españa", "espana", "es"],
+    "flag": "es",
+    "lines": [
+      "900 525 100 ('Samaritans in Spain' - emotional problems)",
+      "717 003 717 ('Teléfono de la Esperanza' - trauma and suicide to relationship issues)"
+    ]
+  },
+  {
+    "name": "Sri Lanka",
+    "alias": ["sri lanka", "sri", "lanka", "lk"],
+    "flag": "lk",
+    "lines": ["94 11 2 68253 ('Sri Lanka Sumithrayo' - suicide)"]
+  },
+  {
+    "name": "Sudan",
+    "alias": ["sudan", "sd"],
+    "flag": "sd",
+    "lines": ["(249) 11-555-253 ('Befrienders Khartoum' - emotional support)"]
+  },
+  {
+    "name": "Suriname",
+    "alias": ["suriname", "sr"],
+    "flag": "sr",
+    "lines": ["112 (National Emergency)"]
+  },
+  {
+    "name": "Sweden",
+    "alias": ["sweden", "se"],
+    "flag": "se",
+    "lines": [
+      "90101 ('Självmordslinjen' - suicide)",
+      "031-800 650 ('SOS phone' - depression and crisis)"
+    ]
+  },
+  {
+    "name": "Switzerland",
+    "alias": ["switzerland", "ch"],
+    "flag": "ch",
+    "lines": ["143 ('Die dargebotene Hand' - counselling)"]
+  },
+  {
+    "name": "Syria",
+    "alias": ["syria", "sy"],
+    "flag": "sy",
+    "lines": ["112 (National Emergency)"]
+  },
+  {
+    "name": "Taiwan",
+    "alias": ["taiwan", "tw"],
+    "flag": "tw",
+    "lines": ["1995 (International Emergency)"]
+  },
+  {
+    "name": "Tajikistan",
+    "alias": ["tajikistan", "tj"],
+    "flag": "tj",
+    "lines": ["112 (National Emergency)"]
+  },
+  {
+    "name": "Tanzania",
+    "alias": ["tanzania", "tz"],
+    "flag": "tz",
+    "lines": ["112 / 999 (National Emergency)"]
+  },
+  {
+    "name": "Timor-Leste (East Timor) ",
+    "alias": [
+      "timor-leste (east timor)",
+      "east timor",
+      "timor",
+      "leste",
+      "tl",
+      "timor leste"
+    ],
+    "flag": "tl",
+    "lines": ["112 (National Emergency)"]
+  },
+  {
+    "name": "Togo",
+    "alias": ["togo", "tg"],
+    "flag": "tg",
+    "lines": [
+      "(228) 90 92 22 22 ('VisionTogo (VTG)' - counselling and mental health support)"
+    ]
+  },
+  {
+    "name": "Tonga",
+    "alias": ["tonga", "to"],
+    "flag": "to",
+    "lines": ["23000 (National Emergency)"]
+  },
+  {
+    "name": "Trinidad & Tobago",
+    "alias": ["trinidad & tobago", "trinidad", "tobago", "tt"],
+    "flag": "tt",
+    "lines": ["800-5588 ('Lifeline' - high risk)"]
+  },
+  {
+    "name": "Tunisia",
+    "alias": ["tunisia", "tn"],
+    "flag": "tn",
+    "lines": ["197 (National Emergency)"]
+  },
+  {
+    "name": "Turkey",
+    "alias": ["turkey", "tr"],
+    "flag": "tr",
+    "lines": [
+      "0850 455 00 70 ('Youth Support Line – Genclik Destek Hatti' - counselling for children)"
+    ]
+  },
+  {
+    "name": "Turkmenistan",
+    "alias": ["turkmenistan", "tm"],
+    "flag": "tm",
+    "lines": ["3 (National Emergency)"]
+  },
+  {
+    "name": "Tuvalu",
+    "alias": ["tuvalu", "tv"],
+    "flag": "tv",
+    "lines": ["Hotlines not found."]
+  },
+  {
+    "name": "Uganda",
+    "alias": ["uganda", "ug"],
+    "flag": "ug",
+    "lines": ["800200450 ('Befriender Uganda' - distress)"]
+  },
+  {
+    "name": "Ukraine",
+    "alias": ["ukraine", "ua"],
+    "flag": "ua",
+    "lines": [
+      "0 800 500 335 / 116 123 ('La Strada-Ukraine/Ла Страда-Україна' - National Hotline for the Prevention of Domestic Violence, Human Trafficking, and Gender Discrimination)",
+      "0 800 500 225 / 116 111 ('La Strada-Ukraine/Ла Страда-Україна' National Children's Hotline)",
+      "7333 ('Lifeline Ukraine' - support for veterans)",
+      "058 ('Telephone of confidence 'Stavropyghion-058' Lviv' - mental health - 12am to 11pm)",
+      "0487 327715/ 0482 226565 ('Odessa Confidence Telephone Service' - mental health - 10am t0 08am every Monday-Friday and 7pm to 8am every Saturday to Sunday)"
+    ]
+  },
+  {
+    "name": "United Arab Emirates",
+    "alias": ["united", "arab", "emirates", "united arab emirates", "ae"],
+    "flag": "ae",
+    "lines": [
+      "800 46342 ('UAE Suicide Prevention (exclusive for Indian Expats)' - distress, crisis and suicide)"
+    ]
+  },
+  {
+    "name": "United Kingdom",
+    "alias": [
+      "united kingdom",
+      "great britain",
+      "united",
+      "kingdom",
+      "britain",
+      "gb",
+      "ireland",
+      "uk",
+      "england"
+    ],
+    "flag": "gb",
+    "lines": [
+      "116 123 ('Samaritans UK & Ireland' - distress and suicide)",
+      "00800 477 477 77 ('Connect Counselling' - UK and Northern Ireland - abuse, trauma or neglect in childhood)",
+      "00353 (0) 1 865 7495 ('Connect Counselling' - Outside ROI and UK - abuse, trauma or neglect in childhood)",
+      "0800 585858 ('Campaign Against Living Miserably Help 'Calm' - depression and suicide for young men)",
+      "0800 068 4141 ('HopeLine UK' - advice and suicide)",
+      "0300 304 7000 ('SANE' - mental illness - 10 am to 10 pm, Monday - Friday)",
+      "0800 1111 (Childline)",
+      "0808 2000 247 ('Refuge' - domestic abuse to women and children)",
+      "0808 800 5000 ('National Society for the Prevention of Cruelty to Children 'NSPCC'' - abuse or neglect)",
+      "0808 8020 133 ('National Gambling Helpline' - gambling problem)",
+      "0300 999 1212 ('Narcotics Anonymous' - drug problems - open until midnight, seven days a week)",
+      "0300 222 11 22 ('National Dementia Helpline' - support - 9 am to 5 pm)"
+    ]
+  },
+  {
+    "name": "United States",
+    "alias": ["united states", "united", "states", "us", "alaska"],
+    "flag": "us",
+    "lines": [
+      "800-448-3000 / Text VOICE to 20121 ('Boys Town National Hotline' - crisis and emergency)",
+      "1 (800) 843-5200 ('California Youth Crisis Line' - emotional support)",
+      "(907) 452 4357 / 1-877-266 4357 ('Careline Crisis Intervention' - Alaska - crisis, isolation, depression and suicide)",
+      "262-377-2673 ('C.O.P.E. Center Helpline' - emotional support and crisis intervention - Ozaukee County, the Greater Milwaukee area and beyond)",
+      "(804) 947-4357 / 1-888-947-9747 ('Crisis Line of Central Virginia' - distress, crisis and suicide)",
+      "(256) 716-1000 / 1-800-691-8426 ('Crisis Services of North Alabama' - distress, crisis and suicide)",
+      "1 800-273-8255 ('Crisis Support Services of Nevada' - crisis and suicide)",
+      "(800) 273 8255 ('Didi Hirsch Suicide Prevention Center' - substance use disorder and suicide)"
+    ]
+  },
+  {
+    "name": "Uruguay",
+    "alias": ["uruguay", "uy"],
+    "flag": "uy",
+    "lines": ["911 (National Emergency)"]
+  },
+  {
+    "name": "Uzbekistan",
+    "alias": ["uzbekistan", "uz"],
+    "flag": "uz",
+    "lines": ["2 (National Emergency)"]
+  },
+  {
+    "name": "Vanuatu",
+    "alias": ["vanuatu", "vu"],
+    "flag": "vu",
+    "lines": ["Hotlines not found"]
+  },
+  {
+    "name": "Venezuela",
+    "alias": ["venezuela", "ve"],
+    "flag": "ve",
+    "lines": ["0241-8433308 ('Telefono de la Esperanza' -mental health)"]
+  },
+  {
+    "name": "Vietnam",
+    "alias": ["vietnam", "vn"],
+    "flag": "vn",
+    "lines": [
+      "877-727-4747 ('Didi Hirsch Torture Crisis Line' - distress, crisis and suicide)",
+      "113 ('Vietnam Emergency Hotline' - distress, crisis and suicide)"
+    ]
+  },
+  {
+    "name": "Yemen",
+    "alias": ["yemen", "ye"],
+    "flag": "ye",
+    "lines": ["199 (National Emergency)"]
+  },
+  {
+    "name": "Zambia",
+    "alias": ["zambia", "zm"],
+    "flag": "zm",
+    "lines": ["933 ('Lifeline/Childline Zambia' -  psycho-social support)"]
+  },
+  {
+    "name": "Zimbabwe",
+    "alias": ["zimbabwe", "zw"],
+    "flag": "zw",
+    "lines": ["080 12 333 333 ('Harare Samaritans' - distress and suicide)"]
   }
 ]
