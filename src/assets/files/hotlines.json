@@ -1144,7 +1144,7 @@
   },
   {
     "name": "Russia",
-    "description": " http://migsovet.ru/",
+    "description": "http://migsovet.ru/",
     "alias": ["russia", "ru"],
     "flag": "ru",
     "lines": [
@@ -1401,7 +1401,7 @@
     "lines": ["112 / 999 (National Emergency)"]
   },
   {
-    "name": "Timor-Leste (East Timor) ",
+    "name": "Timor-Leste (East Timor)",
     "alias": [
       "timor-leste (east timor)",
       "east timor",
