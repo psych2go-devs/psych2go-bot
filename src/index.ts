@@ -3,6 +3,7 @@ import { Client, ClientUser, Intents } from "discord.js";
 import { handleMessageCreateEvent } from "./events/messageCreate";
 import { handleGuildMemberAddEvent } from "./events/guildMemberAdd";
 import { handleGuildMemberRemoveEvent } from "./events/guildMemberRemove";
+import { handleGuildMemberUpdateEvent } from "./events/guildMemberUpdate";
 
 dotenvConfig(); // read environment variables from .env file
 
@@ -40,6 +41,7 @@ client.on("error", (error: Error) => {
 client.on("messageCreate", handleMessageCreateEvent);
 client.on("guildMemberAdd", handleGuildMemberAddEvent);
 client.on("guildMemberRemove", handleGuildMemberRemoveEvent);
+client.on("guildMemberUpdate", handleGuildMemberUpdateEvent);
 
 // Handle environment variables
 
