@@ -3,7 +3,7 @@ name: Deploy
 on:
   push:
     branches:
-      - main
+      - production
   workflow_dispatch:
 
 jobs:
@@ -15,9 +15,9 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Push to Dokku server
+      - name: Deploying to Dokku server
         uses: dokku/github-action@v1.0.1
         with:
-          branch: main
-          git_remote_url: "ssh://dokku@gcies.noxt.us:14422/openis"
-          ssh_private_key: ${{ secrets.DOKKU_SSH_PRIVATE_KEY }}
+          branch: production
+          git_remote_url: ${{ secrets.GIT_REMOTE_URL }}
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
