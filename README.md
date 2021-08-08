@@ -41,7 +41,7 @@ node .
 or
 
 ```
-npm run run
+npm start
 ```
 
 This will run the codes on [dist/](dist/) without compiling the codes on [src/](src/). If you haven't compile/build the codes before, this will throw an error.
@@ -49,7 +49,7 @@ This will run the codes on [dist/](dist/) without compiling the codes on [src/](
 ### Compile and Start Bot
 
 ```
-npm start
+npm run dev
 ```
 
 This will compile TypeScript codes from [src/](src/) into JavaScript codes and save the output to [dist/](dist/), then run the codes on [dist/](dist/) automatically after the process.

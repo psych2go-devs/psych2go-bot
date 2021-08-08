@@ -1,5 +1,11 @@
-import hotlines from "../assets/files/hotlines.json";
-import { Message, MessageEmbed, TextChannel } from "discord.js";
+import hotlines from "../assets/hotlines.json";
+import {
+  Guild,
+  GuildMember,
+  Message,
+  MessageEmbed,
+  TextChannel
+} from "discord.js";
 import { execSync } from "child_process";
 import _ from "lodash";
 
@@ -50,7 +56,7 @@ export const messageCommands: MessageCommands = {
                 },
                 {
                   name: "Dev commands",
-                  value: `\`\`\`[DISABLED] ${commandPrefix}eval\`\`\``,
+                  value: `\`\`\`[DISABLED] ${commandPrefix}eval\n${commandPrefix}testboost\`\`\``,
                   inline: true
                 },
                 {
@@ -188,6 +194,37 @@ export const messageCommands: MessageCommands = {
         // } catch (error) {
         //   message.reply(error.message);
         // }
+      }
+    },
+    {
+      command: [commandPrefix + "testboost"],
+      fn(message) {
+        let now = new Date().toISOString();
+        let oldMember = new GuildMember(
+          message.client,
+          {
+            user: message.author,
+            roles: [],
+            joined_at: now,
+            deaf: false,
+            mute: false
+          },
+          message.guild as Guild
+        );
+        let newMember = new GuildMember(
+          message.client,
+          {
+            user: message.author,
+            roles: [],
+            joined_at: now,
+            deaf: false,
+            mute: false,
+            premium_since: new Date().toISOString()
+          },
+          message.guild as Guild
+        );
+        message.client.emit("guildMemberUpdate", oldMember, newMember);
+        message.reply("Test boost event emitted");
       }
     }
   ],

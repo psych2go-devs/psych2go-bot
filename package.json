@@ -4,10 +4,12 @@
   "description": "DiscordJS bot used in Psych2Go Discord server!",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "npm run clean && tsc && npm run copy-files",
+    "clean": "rimraf dist/",
+    "copy-files": "copyfiles -u 2 \"src/assets/**/*\" \"dist/assets/\"",
+    "dev": "npm run prettify && npm run build && npm start",
     "prettify": "prettier -w ./src",
-    "run": "node .",
-    "start": "npm run prettify && npm run build && npm run run",
+    "start": "node .",
     "watch": "tsc -w"
   },
   "repository": {
@@ -21,9 +23,11 @@
   },
   "homepage": "https://github.com/psych2go-devs/psych2go-bot",
   "dependencies": {
+    "copyfiles": "^2.4.1",
     "discord.js": "^13.0.0-dev.77784ac.1626696170",
     "dotenv": "^10.0.0",
     "lodash": "^4.17.21",
+    "rimraf": "^3.0.2",
     "typescript": "^4.3.5"
   },
   "devDependencies": {
