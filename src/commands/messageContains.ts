@@ -31,6 +31,6 @@ export const messageContains: MessageContains = [
     contain: ["i love psi", "i love you psi"],
     fn: (message) => {
       message.react("❤");
+    }
   }
-}
 ];
