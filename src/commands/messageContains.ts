@@ -26,5 +26,11 @@ export const messageContains: MessageContains = [
         message.react(psiEmoji);
       }
     }
+  },
+  {
+    contain: ["i love psi", "i love you psi"],
+    fn: (message) => {
+      message.react("❤");
   }
+}
 ];
