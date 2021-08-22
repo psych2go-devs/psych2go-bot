@@ -12,7 +12,7 @@ import { formatPluralKitMessage } from "../functions/templateMessages";
 
 interface MessageCommand {
   command: Array<string>;
-  fn: (message: Message, argv: string[]) => any;
+  fn(message: Message, argv: string[]): any;
 }
 
 interface MessageCommands {
@@ -40,7 +40,7 @@ export const messageCommands: MessageCommands = {
   userCommands: [
     {
       command: [commandPrefix + "help"],
-      fn: (message) => {
+      fn(message) {
         message.reply({
           embeds: [
             {
@@ -76,13 +76,13 @@ export const messageCommands: MessageCommands = {
     },
     {
       command: ["hi psi", "hey psi", "hello psi"],
-      fn: (message) => {
+      fn(message) {
         message.reply("hey psych2goer!");
       }
     },
     {
       command: [commandPrefix + "version", commandPrefix + "ver"],
-      fn: (message, argv) => {
+      fn(message, argv) {
         if (!argv.length)
           message.reply({
             embeds: [
@@ -96,13 +96,13 @@ export const messageCommands: MessageCommands = {
     },
     {
       command: [commandPrefix + "i love pink"],
-      fn: (message) => {
+      fn(message) {
         message.reply("I love pink!\n- Lexi");
       }
     },
     {
       command: [commandPrefix + "hotlines"],
-      fn: (message, argv) => {
+      fn(message, argv) {
         let countryFound = false;
 
         if (argv.length) {
@@ -189,7 +189,7 @@ export const messageCommands: MessageCommands = {
   devCommands: [
     {
       command: [commandPrefix + "eval"],
-      fn: (message, argv) => {
+      fn(message, argv) {
         message.reply("This command is temporary disabled");
         // if (!argv.length) {
         //   return message.reply(`Usage: ${commandPrefix}eval <code>`);
@@ -238,7 +238,7 @@ export const messageCommands: MessageCommands = {
   adminCommands: [
     {
       command: [commandPrefix + "bomb"],
-      fn: async (message, argv) => {
+      async fn(message, argv) {
         let replyUsage = () => {
           message.reply(`Usage: ${commandPrefix}bomb <limit> [search]`);
         };

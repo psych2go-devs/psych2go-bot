@@ -7,7 +7,7 @@ import parseArgv from "../functions/parseArgv";
 
 const permissionDeniedMessge = "You do not have permission to use the command";
 
-export const handleMessageCreateEvent = (message: Message) => {
+export function handleMessageCreateEvent(message: Message) {
   if (!message.author.bot && message.guild) {
     let messageTrim = message.content.trim();
     let messageLower = messageTrim.toLowerCase();
@@ -159,4 +159,4 @@ export const handleMessageCreateEvent = (message: Message) => {
       }
     }
   }
-};
+}
