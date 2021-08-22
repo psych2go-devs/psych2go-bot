@@ -1,5 +1,5 @@
 {
   "watch": ["src"],
   "ext": "*",
-  "exec": "ts-node ./src/index.ts"
+  "exec": "npm run prettify && ts-node ./src/index.ts"
 }
