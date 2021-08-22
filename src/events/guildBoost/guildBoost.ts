@@ -1,7 +1,7 @@
 import { DiscordAPIError, GuildMember } from "discord.js";
 import readAssetFile from "../../functions/readAssetFile";
 
-export const handleGuildBoostEvent = async (member: GuildMember) => {
+export async function handleGuildBoostEvent(member: GuildMember) {
   try {
     await member.send(readAssetFile("boost-dm.txt"));
   } catch (error) {
@@ -11,4 +11,4 @@ export const handleGuildBoostEvent = async (member: GuildMember) => {
       }
     }
   }
-};
+}

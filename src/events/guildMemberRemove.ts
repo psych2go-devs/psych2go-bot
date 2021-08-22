@@ -1,8 +1,8 @@
 import { GuildMember, PartialGuildMember, User } from "discord.js";
 
-export const handleGuildMemberRemoveEvent = async (
+export async function handleGuildMemberRemoveEvent(
   member: GuildMember | PartialGuildMember
-) => {
+) {
   // Code runs when a member leaves or is removed to the guild (server)
   // https://stackoverflow.com/questions/62577866/discord-js-listening-for-kicks
   let kickLog = (
@@ -41,4 +41,4 @@ export const handleGuildMemberRemoveEvent = async (
     // User left
     // member.guild.systemChannel?.send(`<@${member.id}> left the server`);
   }
-};
+}

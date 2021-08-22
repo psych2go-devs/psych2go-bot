@@ -2,20 +2,20 @@ import { GuildEmoji, Message } from "discord.js";
 
 interface MessageContain {
   contain: Array<string>;
-  fn: (message: Message, match: string) => any;
+  fn(message: Message, match: string): any;
 }
 interface MessageContains extends Array<MessageContain> {}
 
 export const messageContains: MessageContains = [
   {
     contain: ["cookie"],
-    fn: (message) => {
+    fn(message) {
       message.react("🍪");
     }
   },
   {
     contain: ["psi"],
-    fn: (message) => {
+    fn(message) {
       let matchedPsiEmojis = message.client.emojis.cache.filter(
         (emoji) => (emoji.name as string).toLowerCase() === "psi"
       );
@@ -29,7 +29,7 @@ export const messageContains: MessageContains = [
   },
   {
     contain: ["i love psi", "i love you psi"],
-    fn: (message) => {
+    fn(message) {
       message.react("❤");
     }
   }
