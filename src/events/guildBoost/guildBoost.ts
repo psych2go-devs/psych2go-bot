@@ -1,14 +1,9 @@
 import { DiscordAPIError, GuildMember } from "discord.js";
-import { readFileSync } from "fs";
-import { resolve } from "path";
+import readAssetFile from "../../functions/readAssetFile";
 
 export const handleGuildBoostEvent = async (member: GuildMember) => {
   try {
-    await member.send(
-      readFileSync(
-        resolve(__dirname, "..", "..", "assets", "boost-dm.txt")
-      ).toString()
-    );
+    await member.send(readAssetFile("boost-dm.txt"));
   } catch (error) {
     if (error instanceof DiscordAPIError) {
       if (error.code === 50007) {

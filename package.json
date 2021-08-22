@@ -34,6 +34,8 @@
   "dependencies": {
     "discord.js": "^13.1.0",
     "dotenv": "^10.0.0",
+    "format-message": "^6.2.3",
+    "lodash": "^4.17.21",
     "rimraf": "^3.0.2",
     "yarn": "^1.22.11"
   },
