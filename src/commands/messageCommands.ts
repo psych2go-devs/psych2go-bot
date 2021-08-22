@@ -52,7 +52,7 @@ export const messageCommands: MessageCommands = {
                 },
                 {
                   name: "User Commands",
-                  value: `\`\`\`${commandPrefix}hotlines [country|page]\n${commandPrefix}help\n${commandPrefix}[version|ver]\`\`\``,
+                  value: `\`\`\`${commandPrefix}hotlines [country|page]\n${commandPrefix}did [user...]\n${commandPrefix}help\n${commandPrefix}[version|ver]\`\`\``,
                   inline: true
                 },
                 {
