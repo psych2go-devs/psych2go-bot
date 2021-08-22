@@ -2,6 +2,10 @@
 
 Psych2Go Bot (Psi) does useful and fun stuff writen in [TypeScript][typescript-webpage] ([JavaScript][javascript-webpage]) ([NodeJS][nodejs-webpage])
 
+# Dependencies
+
+Psych2Go Bot uses DiscordJS 13+ which requires [NodeJS][nodejs-webpage] 16.6+. Make sure your NodeJS version is even or higher
+
 # How does this work?
 
 Clone this project using `git`
