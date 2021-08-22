@@ -8,6 +8,7 @@ import {
 } from "discord.js";
 import { execSync } from "child_process";
 import _ from "lodash";
+import { formatPluralKitMessage } from "../functions/templateMessages";
 
 interface MessageCommand {
   command: Array<string>;
@@ -176,6 +177,12 @@ export const messageCommands: MessageCommands = {
             });
           }
         }
+      }
+    },
+    {
+      command: [commandPrefix + "did"],
+      fn(message, args) {
+        message.channel.send(formatPluralKitMessage(args));
       }
     }
   ],
