@@ -7,7 +7,7 @@
     "build": "npm run clean && tsc && npm run copy-files",
     "clean": "rimraf dist/",
     "copy-files": "copyfiles -u 2 \"src/assets/**/*\" \"dist/assets/\"",
-    "dev": "npm run prettify && npm run build && npm start",
+    "dev": "nodemon",
     "prettify": "prettier -w ./src",
     "start": "node .",
     "watch": "tsc -w"
@@ -33,6 +33,8 @@
   "devDependencies": {
     "@types/lodash": "^4.14.172",
     "@types/node": "^16.7.1",
-    "prettier": "^2.3.2"
+    "nodemon": "^2.0.12",
+    "prettier": "^2.3.2",
+    "ts-node": "^10.2.1"
   }
 }
