@@ -1,5 +1,6 @@
 import hotlines from "../assets/hotlines.json";
 import {
+  ClientUser,
   Guild,
   GuildMember,
   Message,
@@ -52,7 +53,7 @@ export const messageCommands: MessageCommands = {
                 },
                 {
                   name: "User Commands",
-                  value: `\`\`\`${commandPrefix}hotlines [country|page]\n${commandPrefix}did [user...]\n${commandPrefix}help\n${commandPrefix}[version|ver]\`\`\``,
+                  value: `\`\`\`${commandPrefix}hotlines [country|page]\n${commandPrefix}did [user...]\n${commandPrefix}help\n${commandPrefix}[version|ver]\n${commandPrefix}[credit|credits]\`\`\``,
                   inline: true
                 },
                 {
@@ -183,6 +184,46 @@ export const messageCommands: MessageCommands = {
       command: [commandPrefix + "did"],
       fn(message, args) {
         message.channel.send(formatPluralKitMessage(args));
+      }
+    },
+    {
+      command: [commandPrefix + "credit", commandPrefix + "credits"],
+      fn(message) {
+        message.channel.send({
+          embeds: [
+            {
+              color: 0xffffff,
+              title: "Psych2Go Community Bot Credits",
+              thumbnail: {
+                url: (
+                  message.client.user as ClientUser
+                ).displayAvatarURL() as string
+              },
+              fields: [
+                {
+                  name: ":art: Profile picture artwork",
+                  value: "by [AnoirX](https://linktr.ee/AnoirX)"
+                },
+                {
+                  name: ":clipboard: Bot team leaders",
+                  value: "- Zehzinhuh\n- Kraid"
+                },
+                {
+                  name: ":desktop: Bot team members",
+                  value: "- Noxturnix\n- KingOworld\n- Jassie\n- DAZ"
+                },
+                {
+                  name: ":globe_with_meridians: Server maintenance/provider",
+                  value: "- Noxturnix"
+                }
+              ],
+              footer: {
+                icon_url: "https://avatars.githubusercontent.com/u/87629718",
+                text: "Psych2Go Bot Team"
+              }
+            }
+          ]
+        });
       }
     }
   ],
