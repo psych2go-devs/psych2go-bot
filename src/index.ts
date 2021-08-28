@@ -4,6 +4,7 @@ import { handleMessageCreateEvent } from "./events/messageCreate";
 import { handleGuildMemberAddEvent } from "./events/guildMemberAdd";
 import { handleGuildMemberRemoveEvent } from "./events/guildMemberRemove";
 import { handleGuildMemberUpdateEvent } from "./events/guildMemberUpdate";
+import { handlePresence } from "./libs/presence";
 
 dotenvConfig(); // read environment variables from .env file
 
@@ -32,6 +33,9 @@ const client = new Client({
 
 client.on("ready", () => {
   console.log(`Logged in as "${(client.user as ClientUser).tag}"`);
+
+  // Handle client presence
+  handlePresence(client);
 });
 
 client.on("error", (error: Error) => {
