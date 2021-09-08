@@ -76,7 +76,7 @@ To stop the bot, send a `SIGINT` to the script (press Ctrl - C).
 
 # License
 
-See [LICENSE](LICENSE)
+See [LICENSE.md](LICENSE.md)
 
 [javascript-webpage]: https://www.javascript.com/
 [typescript-webpage]: https://www.typescriptlang.org/
