@@ -1,15 +1,16 @@
 {
-  "name": "openis",
+  "name": "psych2go-bot",
   "version": "0.0.1",
-  "description": "Open Internal Services for Discord servers",
+  "description": "DiscordJS bot used in Psych2Go Discord server!",
   "main": "dist/index.js",
   "scripts": {
     "start": "node .",
-    "build": "tsc",
+    "build": "tsc && yarn copy-files",
     "build:clean": "yarn clean && yarn build",
     "build:test": "tsc --noEmit",
     "dev": "nodemon",
     "clean": "rimraf dist/",
+    "copy-files": "copyfiles -u 2 \"src/asset/**/*\" \"dist/asset/\"",
     "lint": "prettier --check src/",
     "format": "prettier --write src/",
     "lint:root": "prettier --check .",
@@ -19,13 +20,7 @@
     "type": "git",
     "url": "git+https://github.com/psych2go-devs/psych2go-bot.git"
   },
-  "keywords": [
-    "Discord",
-    "Bot",
-    "Anarchy",
-    "Dick"
-  ],
-  "author": "Noxturnix",
+  "author": "Psych2Go-Bot Contributors",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/psych2go-devs/psych2go-bot"
@@ -33,19 +28,20 @@
   "homepage": "https://github.com/psych2go-devs/psych2go-bot",
   "dependencies": {
     "axios": "^0.21.1",
-    "copyfiles": "^2.4.1",
     "discord.js": "^13.1.0",
     "dotenv": "^10.0.0",
     "format-message": "^6.2.3",
-    "lodash": "^4.17.21",
-    "rimraf": "^3.0.2",
-    "yarn": "^1.22.11"
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.172",
     "@types/node": "^16.7.4",
+    "copyfiles": "^2.4.1",
     "nodemon": "^2.0.12",
     "prettier": "^2.3.2",
-    "typescript": "^4.4.2"
+    "rimraf": "^3.0.2",
+    "typescript": "^4.4.2",
+    "yarn": "^1.22.11"
   },
   "engines": {
     "node": "^16.6.0",

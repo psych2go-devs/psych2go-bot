@@ -1,5 +1,5 @@
 import { DiscordAPIError, GuildMember } from "discord.js";
-import readAssetFile from "../../functions/readAssetFile";
+import readAssetFile from "../../lib/readAssetFile";
 
 export async function handleGuildBoostEvent(member: GuildMember) {
   try {

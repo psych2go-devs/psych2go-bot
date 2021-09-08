@@ -26,9 +26,7 @@ interface YouTubeChannelListResponse {
   items: YouTubeChannelResult[];
 }
 
-export default async function (): Promise<
-  undefined | YouTubeChannelListResponse
-> {
+export default async function (): Promise<undefined | YouTubeChannelListResponse> {
   // Only fetch subscribers if `GCP_API_KEY` environment variable is defined
   if (process.env.GCP_API_KEY) {
     return (

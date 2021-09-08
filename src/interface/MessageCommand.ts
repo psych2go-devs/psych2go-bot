@@ -5,10 +5,14 @@ export interface MessageCommandFunctionCall {
   args: string[];
   matchedCommand: string;
   fromBot: boolean;
+  isDev: boolean;
+  isAdmin: boolean;
 }
 
 export interface MessageCommand {
   command: string[];
   fn(functionCall: MessageCommandFunctionCall): any;
   allowBot?: boolean;
+  isDevCommand?: boolean;
+  isAdminCommand?: boolean;
 }
