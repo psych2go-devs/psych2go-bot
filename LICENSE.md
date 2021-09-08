@@ -1,5 +1,6 @@
 # The MIT License (MIT)
 
+Copyright © 2021 Psych2Go & Psych2Go-Bot Contributors
 Copyright © 2021 Sirawit Thaya (Noxturnix)
 
 Permission is hereby granted, free of charge, to any person
