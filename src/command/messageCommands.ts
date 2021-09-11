@@ -4,6 +4,7 @@ import createCommandString from "../lib/createCommandString";
 import defaultPrefix from "../lib/defaultMessageCommandPrefix";
 import { formatPluralKitMessage } from "../lib/templateMessages";
 import hotlines from "../asset/hotlines.json";
+import rules from "../asset/rules.json";
 import _ from "lodash";
 import { execSync } from "child_process";
 
@@ -27,7 +28,7 @@ const messageCommands: MessageCommand[] = [
               },
               {
                 name: "User Commands",
-                value: `\`\`\`${defaultPrefix}hotline(s) [country|page]\n${defaultPrefix}did [user...]\n${defaultPrefix}help\n${defaultPrefix}[version|ver]\n${defaultPrefix}credit(s)\`\`\``,
+                value: `\`\`\`${defaultPrefix}hotline(s) [country|page]\n${defaultPrefix}rule [search query]\n${defaultPrefix}did [user...]\n${defaultPrefix}help\n${defaultPrefix}[version|ver]\n${defaultPrefix}credit(s)\`\`\``,
                 inline: true
               },
               {
@@ -154,6 +155,51 @@ const messageCommands: MessageCommand[] = [
     }
   },
   {
+    command: [createCommandString("rule")],
+    fn(functionCall) {
+      let replyUsage = () => {
+        functionCall.message.reply({
+          embeds: [
+            {
+              color: 0xffffff,
+              description: `Usage: ${defaultPrefix}rule [search query]`
+            }
+          ]
+        });
+      };
+
+      if (functionCall.args.length) {
+        let searchQuery = functionCall.args.join(" ");
+
+        for (let i = 0; i < rules.length; i++) {
+          let rule = rules[i];
+
+          if (rule.toLowerCase().includes(searchQuery.toLowerCase())) {
+            functionCall.message.channel.send({
+              embeds: [
+                {
+                  color: 0xffffff,
+                  description: `\`\`\`markdown\n${rule}\n\`\`\``
+                }
+              ]
+            });
+
+            return;
+          }
+        }
+
+        functionCall.message.reply({
+          embeds: [
+            {
+              color: 0xffffff,
+              description: "Cannot find rule"
+            }
+          ]
+        });
+      } else replyUsage();
+    }
+  },
+  {
     command: [createCommandString("did")],
     fn(functionCall) {
       functionCall.message.channel.send(formatPluralKitMessage(functionCall.args));
@@ -251,7 +297,14 @@ const messageCommands: MessageCommand[] = [
     isAdminCommand: true,
     async fn(functionCall) {
       let replyUsage = () => {
-        functionCall.message.reply(`Usage: ${defaultPrefix}bomb <limit> [search]`);
+        functionCall.message.reply({
+          embeds: [
+            {
+              color: 0xffffff,
+              description: `Usage: ${defaultPrefix}bomb <limit> [search]`
+            }
+          ]
+        });
       };
 
       if (functionCall.args.length) {
