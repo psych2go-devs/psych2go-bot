@@ -34,7 +34,8 @@ export default (message: Message) => {
     });
 
     // Handle message commands
-    for (let i = 0; i < messageCommands.length; i++) {
+    // Set `commandLoop` label so we can break out of a nested loop with `break commandLoop`
+    commandLoop: for (let i = 0; i < messageCommands.length; i++) {
       let messageCommand = messageCommands[i];
 
       if (!message.author.bot || messageCommand.allowBot) {
@@ -66,7 +67,7 @@ export default (message: Message) => {
 
               messageCommand.fn(messageCommandFunctionCall);
 
-              break;
+              break commandLoop;
             } else {
               message.reply(commandPermissionDenyMessageReplyPayload);
             }
