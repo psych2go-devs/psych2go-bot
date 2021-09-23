@@ -29,7 +29,7 @@ const messageCommands: MessageCommand[] = [
               },
               {
                 name: "User Commands",
-                value: `\`\`\`${defaultPrefix}hotline(s) [country|page]\n${defaultPrefix}rule [search query]\n${defaultPrefix}search <query>\n${defaultPrefix}did [user...]\n${defaultPrefix}help\n${defaultPrefix}[version|ver]\n${defaultPrefix}credit(s)\`\`\``,
+                value: `\`\`\`${defaultPrefix}hotline(s) [country|page]\n${defaultPrefix}rule <search query>\n${defaultPrefix}search <query>\n${defaultPrefix}did [user...]\n${defaultPrefix}help\n${defaultPrefix}[version|ver]\n${defaultPrefix}credit(s)\`\`\``,
                 inline: true
               },
               {
@@ -164,7 +164,7 @@ const messageCommands: MessageCommand[] = [
           embeds: [
             {
               color: 0xffffff,
-              description: `Usage: ${defaultPrefix}rule [search query]`
+              description: `Usage: ${defaultPrefix}rule <search query>`
             }
           ]
         });
