@@ -13,6 +13,7 @@ export interface MessageCommand {
   command: string[];
   fn(functionCall: MessageCommandFunctionCall): any;
   allowBot?: boolean;
+  ignoreCase?: boolean;
   isDevCommand?: boolean;
   isAdminCommand?: boolean;
 }
