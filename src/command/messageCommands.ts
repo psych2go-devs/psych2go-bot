@@ -52,6 +52,7 @@ const messageCommands: MessageCommand[] = [
   },
   {
     command: ["hi psi", "hey psi", "hello psi"],
+    ignoreCase: true,
     fn(functionCall) {
       functionCall.message.reply("hey psych2goer!");
     }
