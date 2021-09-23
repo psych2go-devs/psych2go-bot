@@ -1,30 +1,5 @@
 import axios from "axios";
-
-interface YouTubePageInfo {
-  totalResults: number;
-  resultsPerPage: number;
-}
-
-interface YouTubeChannelStatistics {
-  viewCount: string;
-  subscriberCount: string;
-  hiddenSubscriberCount: boolean;
-  videoCount: string;
-}
-
-interface YouTubeChannelResult {
-  kind: string;
-  etag: string;
-  id: string;
-  statistics: YouTubeChannelStatistics;
-}
-
-interface YouTubeChannelListResponse {
-  kind: string;
-  etag: string;
-  pageInfo: YouTubePageInfo;
-  items: YouTubeChannelResult[];
-}
+import { YouTubeChannelListResponse } from "../interface/YouTube";
 
 export default async function (): Promise<undefined | YouTubeChannelListResponse> {
   // Only fetch subscribers if `GCP_API_KEY` environment variable is defined

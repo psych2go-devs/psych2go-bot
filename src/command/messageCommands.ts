@@ -7,6 +7,7 @@ import hotlines from "../asset/hotlines.json";
 import rules from "../asset/rules.json";
 import _ from "lodash";
 import { execSync } from "child_process";
+import searchChannel from "../lib/searchChannel";
 
 const currentCommitHash = execSync("git rev-parse --short HEAD").toString().trim();
 const currentCommitSubject = execSync('git log --format="%s" -n 1').toString().trim();
@@ -28,7 +29,7 @@ const messageCommands: MessageCommand[] = [
               },
               {
                 name: "User Commands",
-                value: `\`\`\`${defaultPrefix}hotline(s) [country|page]\n${defaultPrefix}rule [search query]\n${defaultPrefix}did [user...]\n${defaultPrefix}help\n${defaultPrefix}[version|ver]\n${defaultPrefix}credit(s)\`\`\``,
+                value: `\`\`\`${defaultPrefix}hotline(s) [country|page]\n${defaultPrefix}rule [search query]\n${defaultPrefix}search <query>\n${defaultPrefix}did [user...]\n${defaultPrefix}help\n${defaultPrefix}[version|ver]\n${defaultPrefix}credit(s)\`\`\``,
                 inline: true
               },
               {
@@ -242,6 +243,52 @@ const messageCommands: MessageCommand[] = [
           }
         ]
       });
+    }
+  },
+  {
+    command: [createCommandString("search")],
+    async fn(functionCall) {
+      let replyUsage = () => {
+        functionCall.message.reply({
+          embeds: [
+            {
+              color: 0xffffff,
+              description: `Usage: ${defaultPrefix}search <query>`
+            }
+          ]
+        });
+      };
+
+      if (functionCall.args.length) {
+        let query = functionCall.args.join(" ");
+        let searchResult = await searchChannel(query);
+
+        if (searchResult) {
+          if (searchResult.pageInfo.totalResults) {
+            functionCall.message.channel.send(
+              `https://youtu.be/${searchResult.items[0].id.videoId}`
+            );
+          } else {
+            functionCall.message.reply({
+              embeds: [
+                {
+                  color: 0xffffff,
+                  title: "No result"
+                }
+              ]
+            });
+          }
+        } else {
+          functionCall.message.reply({
+            embeds: [
+              {
+                color: 0xffffff,
+                title: "This feature is not available"
+              }
+            ]
+          });
+        }
+      } else replyUsage();
     }
   },
   {
