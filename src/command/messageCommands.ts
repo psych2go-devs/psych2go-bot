@@ -34,7 +34,7 @@ const messageCommands: MessageCommand[] = [
               },
               {
                 name: "Dev commands",
-                value: `\`\`\`[DISABLED] ${defaultPrefix}eval\n${defaultPrefix}testboost\`\`\``,
+                value: `\`\`\`${defaultPrefix}say <message>\n[DISABLED] ${defaultPrefix}eval\n${defaultPrefix}testboost\`\`\``,
                 inline: true
               },
               {
@@ -288,6 +288,26 @@ const messageCommands: MessageCommand[] = [
             ]
           });
         }
+      } else replyUsage();
+    }
+  },
+  {
+    command: [createCommandString("say")],
+    isDevCommand: true,
+    fn(functionCall) {
+      let replyUsage = () => {
+        functionCall.message.reply({
+          embeds: [
+            {
+              color: 0xffffff,
+              description: `Usage: ${defaultPrefix}say <message>`
+            }
+          ]
+        });
+      };
+
+      if (functionCall.args.length) {
+        functionCall.message.channel.send(functionCall.args.join(" "));
       } else replyUsage();
     }
   },
