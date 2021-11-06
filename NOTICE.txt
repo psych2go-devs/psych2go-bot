@@ -1,0 +1,2 @@
+adviceslip messages are from https://adviceslip.com/
+https://api.adviceslip.com/

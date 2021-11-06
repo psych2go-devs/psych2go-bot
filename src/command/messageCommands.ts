@@ -8,6 +8,8 @@ import rules from "../asset/rules.json";
 import _ from "lodash";
 import { execSync } from "child_process";
 import searchChannel from "../lib/searchChannel";
+import { getAdviceSlip } from "../lib/getAdviceSlip";
+import moment from "moment";
 
 const currentCommitHash = execSync("git rev-parse --short HEAD").toString().trim();
 const currentCommitSubject = execSync('git log --format="%s" -n 1').toString().trim();
@@ -29,7 +31,7 @@ const messageCommands: MessageCommand[] = [
               },
               {
                 name: "User Commands",
-                value: `\`\`\`${defaultPrefix}hotline(s) [country|page]\n${defaultPrefix}rule <search query>\n${defaultPrefix}search <query>\n${defaultPrefix}did [user...]\n${defaultPrefix}help\n${defaultPrefix}[version|ver]\n${defaultPrefix}credit(s)\`\`\``,
+                value: `\`\`\`${defaultPrefix}adviceslip\n${defaultPrefix}hotline(s) [country|page]\n${defaultPrefix}rule <search query>\n${defaultPrefix}search <query>\n${defaultPrefix}did [user...]\n${defaultPrefix}help\n${defaultPrefix}[version|ver]\n${defaultPrefix}credit(s)\`\`\``,
                 inline: true
               },
               {
@@ -289,6 +291,34 @@ const messageCommands: MessageCommand[] = [
           });
         }
       } else replyUsage();
+    }
+  },
+  {
+    command: [createCommandString("adviceslip")],
+    async fn(functionCall) {
+      let slipMessage = functionCall.message.channel.send({
+        embeds: [
+          {
+            color: 0xffffff,
+            title: "PRINTING SLIP..."
+          }
+        ]
+      });
+
+      let adviceSlip = await getAdviceSlip();
+
+      (await slipMessage).edit({
+        embeds: [
+          {
+            color: 0xffffff,
+            title: "ADVICE SLIP",
+            description: adviceSlip.advice.toUpperCase(),
+            footer: {
+              text: moment.utc().format("MMMM Qo YYYY h:mm:ss A z").toUpperCase()
+            }
+          }
+        ]
+      });
     }
   },
   {
