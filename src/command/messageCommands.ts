@@ -8,6 +8,7 @@ import rules from "../asset/rules.json";
 import _ from "lodash";
 import { execSync } from "child_process";
 import searchChannel from "../lib/searchChannel";
+import inspirationalQuotes from "../lib/getInspirationalQuotes";
 import { getAdviceSlip } from "../lib/getAdviceSlip";
 import moment from "moment";
 
@@ -31,7 +32,7 @@ const messageCommands: MessageCommand[] = [
               },
               {
                 name: "User Commands",
-                value: `\`\`\`${defaultPrefix}adviceslip\n${defaultPrefix}hotline(s) [country|page]\n${defaultPrefix}rule <search query>\n${defaultPrefix}search <query>\n${defaultPrefix}did [user...]\n${defaultPrefix}help\n${defaultPrefix}[version|ver]\n${defaultPrefix}credit(s)\`\`\``,
+                value: `\`\`\`${defaultPrefix}inspire\n${defaultPrefix}adviceslip\n${defaultPrefix}hotline(s) [country|page]\n${defaultPrefix}rule <search query>\n${defaultPrefix}search <query>\n${defaultPrefix}did [user...]\n${defaultPrefix}help\n${defaultPrefix}[version|ver]\n${defaultPrefix}credit(s)\`\`\``,
                 inline: true
               },
               {
@@ -241,6 +242,25 @@ const messageCommands: MessageCommand[] = [
             footer: {
               icon_url: "https://avatars.githubusercontent.com/u/87629718",
               text: "Psych2Go Bot Team"
+            }
+          }
+        ]
+      });
+    }
+  },
+  {
+    command: [createCommandString("inspire")],
+    async fn(functionCall) {
+      let shuffledQuotes = _.shuffle(inspirationalQuotes);
+
+      functionCall.message.channel.send({
+        embeds: [
+          {
+            color: 0xffffff,
+            title: "Some random inspirational quote for you",
+            description: shuffledQuotes[0].quote,
+            footer: {
+              text: `- ${shuffledQuotes[0].author}`
             }
           }
         ]

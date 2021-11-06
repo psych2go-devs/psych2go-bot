@@ -1,2 +1,5 @@
+Inspirational quotes are downloaded from randomwordgenerator.com
+https://randomwordgenerator.com/json/inspirational-quote.json
+
 adviceslip messages are from https://adviceslip.com/
 https://api.adviceslip.com/
