@@ -8,6 +8,7 @@ import rules from "../asset/rules.json";
 import _ from "lodash";
 import { execSync } from "child_process";
 import searchChannel from "../lib/searchChannel";
+import motivation from "../asset/motivation.json";
 
 const currentCommitHash = execSync("git rev-parse --short HEAD").toString().trim();
 const currentCommitSubject = execSync('git log --format="%s" -n 1').toString().trim();
@@ -243,6 +244,12 @@ const messageCommands: MessageCommand[] = [
           }
         ]
       });
+    }
+  },
+  {
+    command: [createCommandString("motivate")],
+    async fn(functionCall) {
+     // choose random quote from long list of motivational stuff here and send it in the channel the command was used in 
     }
   },
   {
