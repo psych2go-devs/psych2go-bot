@@ -383,7 +383,7 @@ const messageCommands: MessageCommand[] = [
     isDevCommand: true,
     fn(functionCall) {
       let now = new Date().toISOString();
-      let oldMember = new GuildMember(
+      let oldMember = Reflect.construct(GuildMember, [
         functionCall.message.client,
         {
           user: functionCall.message.author,
@@ -393,8 +393,8 @@ const messageCommands: MessageCommand[] = [
           mute: false
         },
         functionCall.message.guild as Guild
-      );
-      let newMember = new GuildMember(
+      ]) as GuildMember;
+      let newMember = Reflect.construct(GuildMember, [
         functionCall.message.client,
         {
           user: functionCall.message.author,
@@ -405,7 +405,7 @@ const messageCommands: MessageCommand[] = [
           premium_since: new Date().toISOString()
         },
         functionCall.message.guild as Guild
-      );
+      ]) as GuildMember;
       functionCall.message.client.emit("guildMemberUpdate", oldMember, newMember);
       functionCall.message.reply("Test boost event emitted");
     }
