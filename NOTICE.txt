@@ -1,0 +1,2 @@
+Inspirational quotes are downloaded from randomwordgenerator.com
+https://randomwordgenerator.com/json/inspirational-quote.json

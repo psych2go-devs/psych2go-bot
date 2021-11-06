@@ -8,7 +8,7 @@ import rules from "../asset/rules.json";
 import _ from "lodash";
 import { execSync } from "child_process";
 import searchChannel from "../lib/searchChannel";
-import motivation from "../asset/motivation.json";
+import inspirationalQuotes from "../lib/getInspirationalQuotes";
 
 const currentCommitHash = execSync("git rev-parse --short HEAD").toString().trim();
 const currentCommitSubject = execSync('git log --format="%s" -n 1').toString().trim();
@@ -30,7 +30,7 @@ const messageCommands: MessageCommand[] = [
               },
               {
                 name: "User Commands",
-                value: `\`\`\`${defaultPrefix}hotline(s) [country|page]\n${defaultPrefix}rule <search query>\n${defaultPrefix}search <query>\n${defaultPrefix}did [user...]\n${defaultPrefix}help\n${defaultPrefix}[version|ver]\n${defaultPrefix}credit(s)\`\`\``,
+                value: `\`\`\`${defaultPrefix}inspire\n${defaultPrefix}hotline(s) [country|page]\n${defaultPrefix}rule <search query>\n${defaultPrefix}search <query>\n${defaultPrefix}did [user...]\n${defaultPrefix}help\n${defaultPrefix}[version|ver]\n${defaultPrefix}credit(s)\`\`\``,
                 inline: true
               },
               {
@@ -247,9 +247,22 @@ const messageCommands: MessageCommand[] = [
     }
   },
   {
-    command: [createCommandString("motivate")],
+    command: [createCommandString("inspire")],
     async fn(functionCall) {
-      // choose random quote from long list of motivational stuff here and send it in the channel the command was used in
+      let shuffledQuotes = _.shuffle(inspirationalQuotes);
+
+      functionCall.message.channel.send({
+        embeds: [
+          {
+            color: 0xffffff,
+            title: "Some random inspirational quote for you",
+            description: shuffledQuotes[0].quote,
+            footer: {
+              text: `- ${shuffledQuotes[0].author}`
+            }
+          }
+        ]
+      });
     }
   },
   {
