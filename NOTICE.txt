@@ -1,5 +1,5 @@
-Inspirational quotes are downloaded from randomwordgenerator.com
-https://randomwordgenerator.com/json/inspirational-quote.json
+Inspirational quotes are from quotable.io
+https://github.com/lukePeavey/quotable/blob/master/README.md
 
 adviceslip messages are from https://adviceslip.com/
 https://api.adviceslip.com/

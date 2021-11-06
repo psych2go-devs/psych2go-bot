@@ -8,7 +8,7 @@ import rules from "../asset/rules.json";
 import _ from "lodash";
 import { execSync } from "child_process";
 import searchChannel from "../lib/searchChannel";
-import inspirationalQuotes from "../lib/getInspirationalQuotes";
+import getInspirationalQuotes from "../lib/getInspirationalQuotes";
 import { getAdviceSlip } from "../lib/getAdviceSlip";
 import moment from "moment";
 
@@ -251,16 +251,16 @@ const messageCommands: MessageCommand[] = [
   {
     command: [createCommandString("inspire")],
     async fn(functionCall) {
-      let shuffledQuotes = _.shuffle(inspirationalQuotes);
+      let inspirationalQuotes = await getInspirationalQuotes();
 
       functionCall.message.channel.send({
         embeds: [
           {
             color: 0xffffff,
             title: "Some random inspirational quote for you",
-            description: shuffledQuotes[0].quote,
+            description: inspirationalQuotes.content,
             footer: {
-              text: `- ${shuffledQuotes[0].author}`
+              text: `- ${inspirationalQuotes.author}`
             }
           }
         ]

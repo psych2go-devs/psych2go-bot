@@ -1,17 +1,10 @@
-import insporationalQuotes from "../asset/inspirationalQuotes.json";
-import striptags from "striptags";
-import { InspirationalQuote } from "../interface/InspirationalQuotes";
+import { QuoteResponse } from "../interface/Quote";
+import axios from "axios";
 
-let quotes: InspirationalQuote[] = [];
+export default async function () {
+  let { data: quote } = await axios.get<QuoteResponse>(
+    "https://api.quotable.io/random?tags=inspirational"
+  );
 
-insporationalQuotes.data.forEach((rawQuote) => {
-  let strippedRawQuote = striptags(rawQuote.inspirational_quote);
-  let splitedRawQuote = strippedRawQuote.substr(1).split("” - ");
-
-  quotes.push({
-    quote: splitedRawQuote[0],
-    author: splitedRawQuote[1]
-  });
-});
-
-export default quotes;
+  return quote;
+}
