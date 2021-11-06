@@ -249,7 +249,7 @@ const messageCommands: MessageCommand[] = [
   {
     command: [createCommandString("motivate")],
     async fn(functionCall) {
-     // choose random quote from long list of motivational stuff here and send it in the channel the command was used in 
+      // choose random quote from long list of motivational stuff here and send it in the channel the command was used in
     }
   },
   {
