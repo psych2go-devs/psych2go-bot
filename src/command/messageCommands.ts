@@ -334,7 +334,7 @@ const messageCommands: MessageCommand[] = [
             title: "ADVICE SLIP",
             description: adviceSlip.advice.toUpperCase(),
             footer: {
-              text: moment.utc().format("MMMM Qo YYYY h:mm:ss A z").toUpperCase()
+              text: moment.utc().format("MMMM Do YYYY h:mm:ss A z").toUpperCase()
             }
           }
         ]
