@@ -1,4 +1,4 @@
-import { Client, TextChannel } from "discord.js";
+import { Client, NewsChannel, TextChannel } from "discord.js";
 import Notifier from "youtube-notify";
 import loadEnv from "../lib/loadEnv";
 
@@ -16,14 +16,14 @@ export default (client: Client) => {
     .get(process.env.GUILD_ID as string)
     ?.channels.cache.get(process.env.NEW_CONTENT_CHANNEL_ID as string);
 
-  if (channel instanceof TextChannel) {
+  if (channel instanceof TextChannel || channel instanceof NewsChannel) {
     youtubeNotifier.setup();
     youtubeNotifier.on("notified", (data) => {
       let videoUrl = "https://youtu.be/" + data.video.link.split("v=")[1].split("&")[0];
 
       (channel as TextChannel).send(`Hey guys, check out our new video!\n${videoUrl}`);
     });
-
-    youtubeNotifier.subscribe(process.env.YOUTUBE_CHANNEL_ID as string);
   }
+
+  youtubeNotifier.subscribe(process.env.YOUTUBE_CHANNEL_ID as string);
 };
