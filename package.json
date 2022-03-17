@@ -32,7 +32,8 @@
     "dotenv": "^14.3.0",
     "format-message": "^6.2.3",
     "lodash": "^4.17.21",
-    "moment": "^2.29.1"
+    "moment": "^2.29.1",
+    "youtube-notify": "^2.0.2"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.178",

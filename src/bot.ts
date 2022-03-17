@@ -4,6 +4,8 @@ import guildMemberAdd from "./event/guildMemberAdd";
 import guildMemberRemove from "./event/guildMemberRemove";
 import guildMemberUpdate from "./event/guildMemberUpdate";
 import handlePresence from "./background/handlePresence";
+import Notifier from "youtube-notify";
+import handleNewVidEvent from "./background/handleNewVidEvent";
 
 // DiscordJS documentations can be found here
 // https://discord.js.org/#/docs/main/main/general/welcome
@@ -26,6 +28,7 @@ client.on("ready", () => {
 
   // Handle client presence
   handlePresence(client);
+  handleNewVidEvent(client);
 });
 
 client.on("error", (error: Error) => {

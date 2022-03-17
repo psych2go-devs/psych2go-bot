@@ -10,7 +10,7 @@ export default async function (): Promise<undefined | YouTubeChannelListResponse
         {
           params: {
             part: "statistics",
-            id: "UCkJEpR7JmS36tajD34Gp4VA", // Psych2Go Channel ID
+            id: process.env.YOUTUBE_CHANNEL_ID,
             key: process.env.GCP_API_KEY
           }
         }

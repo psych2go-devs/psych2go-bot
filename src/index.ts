@@ -1,5 +1,6 @@
 import { ShardingManager } from "discord.js";
 import { resolve } from "path";
+import { youtubeNotifier } from "./background/handleNewVidEvent";
 import loadEnv from "./lib/loadEnv";
 
 loadEnv();
@@ -33,5 +34,8 @@ shardingManager.spawn().catch((reason: Error) => {
 
 process.on("SIGINT", () => {
   console.log("Exiting...");
+
+  youtubeNotifier.unsubscribe(process.env.YOUTUBE_CHANNEL_ID as string);
+
   process.exit(0);
 });
