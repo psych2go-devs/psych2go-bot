@@ -6,7 +6,7 @@ loadEnv();
 
 export let youtubeNotifier = new Notifier({
   hubCallback: process.env.HUB_CALLBACK_URL as string,
-  port: 6268,
+  port: 80,
   secret: process.env.PUBSUBHUBBUB_SECRET,
   path: "/youtube"
 });

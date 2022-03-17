@@ -25,6 +25,6 @@ COPY --from=builder /app-src/.git /app/.git
 
 RUN yarn --production
 
-EXPOSE 6268
+EXPOSE 80
 
 CMD [ "node", "index.js" ]
