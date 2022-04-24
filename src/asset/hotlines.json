@@ -680,7 +680,12 @@
     "name": "Kuwait",
     "alias": ["kuwait", "kw"],
     "flag": "kw",
-    "lines": ["Hotlines not found."]
+    "lines": [
+      "112 (Kuwait Police, Ambulance and Fire Services)",
+      "114 (Public Institution for Social Security)",
+      "24878168 (Ministry of Health)",
+      "22480000 (Ministry of Justice)"
+    ]
   },
   {
     "name": "Kyrgyzstan",
