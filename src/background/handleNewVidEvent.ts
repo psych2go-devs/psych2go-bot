@@ -15,13 +15,22 @@ export default (client: Client) => {
   let channel = client.guilds.cache
     .get(process.env.GUILD_ID as string)
     ?.channels.cache.get(process.env.NEW_CONTENT_CHANNEL_ID as string);
+  let receivedVideoIds: string[] = [];
 
   if (channel instanceof TextChannel || channel instanceof NewsChannel) {
     youtubeNotifier.setup();
     youtubeNotifier.on("notified", (data) => {
-      let videoUrl = "https://youtu.be/" + data.video.link.split("v=")[1].split("&")[0];
+      let videoId = data.video.link.split("v=")[1].split("&")[0];
 
-      (channel as TextChannel).send(`Hey guys, check out our new video!\n${videoUrl}`);
+      if (!receivedVideoIds.includes(videoId)) {
+        // Workaround for duplicate videos
+        receivedVideoIds.push(videoId);
+        receivedVideoIds = receivedVideoIds.slice(-50);
+
+        let videoUrl = "https://youtu.be/" + videoId;
+
+        (channel as TextChannel).send(`Hey guys, check out our new video!\n${videoUrl}`);
+      }
     });
   }
 
