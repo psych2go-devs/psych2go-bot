@@ -28,7 +28,7 @@
   "homepage": "https://github.com/psych2go-devs/psych2go-bot",
   "dependencies": {
     "axios": "^0.25.0",
-    "discord.js": "^13.6.0",
+    "discord.js": "~13.6.0",
     "dotenv": "^14.3.0",
     "format-message": "^6.2.3",
     "lodash": "^4.17.21",
