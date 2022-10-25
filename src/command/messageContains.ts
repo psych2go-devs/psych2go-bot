@@ -9,6 +9,12 @@ const messageContains: MessageContain[] = [
     }
   },
   {
+    contain: ["candy", "candies"],
+    fn({ message }) {
+      if (process.env.CANDY_REACTION) message.react("🍬");
+    }
+  },
+  {
     contain: ["psi"],
     fn(functionCall) {
       let matchedPsiEmojis = functionCall.message.client.emojis.cache.filter(

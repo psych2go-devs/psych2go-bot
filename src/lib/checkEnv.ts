@@ -23,4 +23,5 @@ export default () => {
   }
 
   process.env.COMMAND_PREFIX = process.env.COMMAND_PREFIX || defaultMessageCommandPrefix;
+  process.env.CANDY_REACTION = process.env.CANDY_REACTION || "";
 };
