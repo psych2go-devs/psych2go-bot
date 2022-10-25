@@ -4,8 +4,8 @@ import { MessageContain } from "../interface/MessageContain";
 const messageContains: MessageContain[] = [
   {
     contain: ["cookie"],
-    fn(functionCall) {
-      functionCall.message.react("🍪");
+    fn({ message }) {
+      message.react("🍪");
     }
   },
   {
@@ -16,22 +16,22 @@ const messageContains: MessageContain[] = [
   },
   {
     contain: ["psi"],
-    fn(functionCall) {
-      let matchedPsiEmojis = functionCall.message.client.emojis.cache.filter(
+    fn({ message }) {
+      let matchedPsiEmojis = message.client.emojis.cache.filter(
         (emoji) => (emoji.name as string).toLowerCase() === "psi"
       );
 
       if (matchedPsiEmojis.size) {
         let psiEmoji = matchedPsiEmojis.first() as GuildEmoji;
 
-        functionCall.message.react(psiEmoji);
+        message.react(psiEmoji);
       }
     }
   },
   {
     contain: ["i love psi", "i love you psi"],
-    fn(functionCall) {
-      functionCall.message.react("❤");
+    fn({ message }) {
+      message.react("❤");
     }
   }
 ];
