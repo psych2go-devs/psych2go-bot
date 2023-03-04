@@ -29,7 +29,7 @@ export default (client: Client) => {
 
         let videoUrl = "https://youtu.be/" + videoId;
 
-        (channel as TextChannel).send(`Hey guys, check out our new video!\n${videoUrl}`);
+        (channel as TextChannel).send(`Hey, guys! Check out our new video!\n${videoUrl}`);
       }
     });
   }
