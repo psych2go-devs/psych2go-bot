@@ -4,7 +4,7 @@ import { decideCookieReaction } from "../lib/transformersClient";
 
 const messageContains: MessageContain[] = [
   {
-    contain: ["cooki"],
+    contain: ["cookie"],
     async fn({ message }) {
       if (process.env.TRANSFORMERS_SERVER_ADDRESS) {
         let decision = await decideCookieReaction(message.content);
