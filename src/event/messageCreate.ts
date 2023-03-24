@@ -58,7 +58,7 @@ export default (message: Message) => {
               (messageCommand.isAdminCommand && messageAuthorIsAdmin)
             ) {
               let commandArgs = trimmedMessage
-                .substr(command.length)
+                .substring(command.length)
                 .trimStart()
                 .split(" ")
                 .filter((arg) => arg);
