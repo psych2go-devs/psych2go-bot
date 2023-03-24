@@ -1,7 +1,7 @@
-export default (roleIdString: string | undefined) => {
-  let idString = roleIdString || "";
+export default (envString: string | undefined) => {
+  let str = envString || "";
 
-  return idString
+  return str
     .split(",")
     .filter((v) => v)
     .map((v) => v.trim());

@@ -1,5 +1,6 @@
 import { GuildEmoji } from "discord.js";
 import { MessageContain } from "../interface/MessageContain";
+import splitEnvStringToArray from "../lib/splitEnvStringToArray";
 import { decideCookieReaction } from "../lib/transformersClient";
 
 const messageContains: MessageContain[] = [
@@ -22,14 +23,20 @@ const messageContains: MessageContain[] = [
   {
     contain: ["psi"],
     fn({ message }) {
-      let matchedPsiEmojis = message.client.emojis.cache.filter(
-        (emoji) => (emoji.name as string).toLowerCase() === "psi"
-      );
+      if (
+        !splitEnvStringToArray(process.env.EXCLUDED_PSI_REACTION_CHANNEL_IDS).includes(
+          message.channelId
+        )
+      ) {
+        let matchedPsiEmojis = message.client.emojis.cache.filter(
+          (emoji) => (emoji.name as string).toLowerCase() === "psi"
+        );
 
-      if (matchedPsiEmojis.size) {
-        let psiEmoji = matchedPsiEmojis.first() as GuildEmoji;
+        if (matchedPsiEmojis.size) {
+          let psiEmoji = matchedPsiEmojis.first() as GuildEmoji;
 
-        message.react(psiEmoji);
+          message.react(psiEmoji);
+        }
       }
     }
   },
