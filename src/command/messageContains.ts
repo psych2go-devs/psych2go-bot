@@ -29,7 +29,9 @@ const messageContains: MessageContain[] = [
         )
       ) {
         let matchedPsiEmojis = message.client.emojis.cache.filter(
-          (emoji) => (emoji.name as string).toLowerCase() === "psi"
+          (emoji) =>
+            (emoji.name as string).toLowerCase() ===
+            (process.env.PSI_REACTION_NAME || "psi").toLowerCase()
         );
 
         if (matchedPsiEmojis.size) {
