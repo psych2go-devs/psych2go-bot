@@ -36,7 +36,7 @@ const messageCommands: MessageCommand[] = [
                 inline: true
               },
               {
-                name: "Dev commands",
+                name: "Staff commands",
                 value: `\`\`\`${defaultPrefix}say <message>\n[DISABLED] ${defaultPrefix}eval\n${defaultPrefix}testboost\`\`\``,
                 inline: true
               },
