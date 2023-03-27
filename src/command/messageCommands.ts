@@ -227,16 +227,16 @@ const messageCommands: MessageCommand[] = [
                 value: "by [AnoirX](https://linktr.ee/AnoirX)"
               },
               {
-                name: ":clipboard: Bot team leaders",
-                value: "- Zehzinhuh\n- Kraid"
-              },
-              {
-                name: ":desktop: Bot team members",
-                value: "- Noxturnix\n- KingOworld\n- Jassie\n- DAZ"
-              },
-              {
                 name: ":globe_with_meridians: Server maintenance/provider",
                 value: "- Noxturnix"
+              },
+              {
+                name: ":white_heart: Special thanks",
+                value: "- Psych2Go community staff\n- Project contributors"
+              },
+              {
+                name: ":tools: Source code",
+                value: "[GitHub](https://github.com/psych2go-devs/psych2go-bot)"
               }
             ],
             footer: {
