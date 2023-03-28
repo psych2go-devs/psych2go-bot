@@ -1,16 +1,16 @@
 import { GuildEmoji } from "discord.js";
 import { MessageContain } from "../interface/MessageContain";
 import splitEnvStringToArray from "../lib/splitEnvStringToArray";
-import { decideCookieReaction } from "../lib/transformersClient";
+import { analyzeCookieMessage } from "../lib/transformersClient";
 
 const messageContains: MessageContain[] = [
   {
     contain: ["cookie"],
     async fn({ message }) {
       if (process.env.TRANSFORMERS_SERVER_ADDRESS) {
-        let decision = await decideCookieReaction(message.content);
+        let analysis = await analyzeCookieMessage(message.content);
 
-        if (decision.id) message.react("🍪");
+        if (analysis.id) message.react("🍪");
       } else message.react("🍪");
     }
   },
