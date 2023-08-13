@@ -1,4 +1,4 @@
-Hey{ARGS},
+Hey{ARGS}!
 
 I notice that you're confused about chatting with a "BOT", so let me help you shed some light on this. Unlike me, **they aren't bots!** They're real people using a tool, PluralKit, to help them communicate.
 
