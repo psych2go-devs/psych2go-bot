@@ -1,4 +1,4 @@
-import { Message, ReplyMessageOptions } from "discord.js";
+import { Message, MessageReplyOptions } from "discord.js";
 import allMessages from "../command/allMessages";
 import messageCommands from "../command/messageCommands";
 import messageContains from "../command/messageContains";
@@ -6,11 +6,11 @@ import { MessageCommandFunctionCall } from "../interface/MessageCommand";
 import { MessageContainFunctionCall } from "../interface/MessageContain";
 import roleId from "../lib/roleId";
 
-const commandPermissionDenyMessageReplyPayload: ReplyMessageOptions = {
+const commandPermissionDenyMessageReplyPayload: MessageReplyOptions = {
   embeds: [
     {
       color: 0xffffff,
-      description: "You do not have permission to use this command"
+      description: "You do not have permission to use this command."
     }
   ]
 };

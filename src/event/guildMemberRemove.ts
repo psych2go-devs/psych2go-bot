@@ -1,18 +1,18 @@
-import { GuildMember, PartialGuildMember, User } from "discord.js";
+import { AuditLogEvent, GuildMember, PartialGuildMember, User } from "discord.js";
 
 export default async (member: GuildMember | PartialGuildMember) => {
-  // Code runs when a member leaves or is removed to the guild (server)
+  // Code runs when a member leaves or is removed from the guild (server)
   // https://stackoverflow.com/questions/62577866/discord-js-listening-for-kicks
   let kickLog = (
     await member.guild.fetchAuditLogs({
       limit: 1,
-      type: "MEMBER_KICK"
+      type: AuditLogEvent.MemberKick
     })
   ).entries.first();
   let banLog = (
     await member.guild.fetchAuditLogs({
       limit: 1,
-      type: "MEMBER_BAN_ADD"
+      type: AuditLogEvent.MemberBanAdd
     })
   ).entries.first();
   if (

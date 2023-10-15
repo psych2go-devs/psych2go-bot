@@ -21,7 +21,7 @@ shardingManager.on("shardCreate", (shard) => {
     console.log(`Shard ${shard.id} disconnected`);
   });
 
-  shard.on("reconnection", () => {
+  shard.on("reconnecting", () => {
     console.log(`Shard ${shard.id} reconnecting`);
   });
 });

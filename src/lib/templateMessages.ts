@@ -1,6 +1,5 @@
 import readAssetFile from "./readAssetFile";
 import formatMessage from "format-message";
-import { Snowflake } from "discord.js";
 
 formatMessage.setup({ missingTranslation: "ignore" });
 

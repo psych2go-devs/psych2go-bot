@@ -1,4 +1,4 @@
-import { ClientUser, Guild, GuildMember, MessageEmbed, TextChannel } from "discord.js";
+import { ClientUser, Guild, GuildMember, TextChannel, APIEmbed, MessageFlags } from "discord.js";
 import type { MessageCommand } from "../interface/MessageCommand";
 import createCommandString from "../lib/createCommandString";
 import defaultPrefix from "../lib/defaultMessageCommandPrefix";
@@ -10,6 +10,7 @@ import { execSync } from "child_process";
 import searchChannel from "../lib/searchChannel";
 import getInspirationalQuotes from "../lib/getInspirationalQuotes";
 import { getAdviceSlip } from "../lib/getAdviceSlip";
+import { latestAssistStore } from "../lib/assistCache";
 import moment from "moment";
 
 const currentCommitHash = execSync("git rev-parse --short HEAD").toString().trim();
@@ -94,12 +95,12 @@ const messageCommands: MessageCommand[] = [
             hotline.name.toLowerCase() === searchString ||
             hotline.alias.map((al) => al.toLowerCase()).includes(searchString)
           ) {
-            let embedMessage = new MessageEmbed({
+            let embedMessage: APIEmbed = {
               color: 0xffffff,
               description: `**${hotline.name} :flag_${hotline.flag}:**\n\n${hotline.lines
                 .map((line) => "- " + line)
                 .join("\n")}`
-            });
+            };
 
             if (hotline.description) embedMessage.description += `\n\n${hotline.description}`;
 
@@ -116,10 +117,10 @@ const messageCommands: MessageCommand[] = [
         ) {
           let chunkedHotlines = _.chunk(hotlines, 10);
           let chunkedHotline = chunkedHotlines[0];
-          let countriesEmbedMessage = new MessageEmbed({
+          let countriesEmbedMessage: APIEmbed = {
             color: 0xffffff,
             description: `**List of countries [1/${chunkedHotlines.length}]**\n\n`
-          });
+          };
 
           if (functionCall.args.length == 1) {
             let page = parseInt(functionCall.args[0]);
@@ -339,6 +340,81 @@ const messageCommands: MessageCommand[] = [
           }
         ]
       });
+    }
+  },
+  {
+    command: [createCommandString("assist"), createCommandString("aid")],
+    async fn(functionCall) {
+      let authorId = functionCall.message.author.id;
+      let cooldownExpireTime = moment.utc();
+      let onCooldown = false;
+
+      if (process.env.ENABLE_ASSIST_COMMAND) {
+        if (latestAssistStore.has(authorId)) {
+          let latestAssist = moment.utc(latestAssistStore.get(authorId));
+
+          cooldownExpireTime = latestAssist.add(30, "m"); // Hardcoded cooldown to 30 minutes.
+
+          if (cooldownExpireTime.isAfter(moment.utc())) onCooldown = true;
+        }
+
+        if (!onCooldown) {
+          let generalChannel = functionCall.message.client.channels.cache.get(
+            process.env.GENERAL_CHANNEL_ID as string
+          );
+
+          if (!(generalChannel === undefined)) {
+            latestAssistStore.set(authorId, moment.utc().valueOf());
+
+            (generalChannel as TextChannel).send({
+              embeds: [
+                {
+                  color: 0xffffff,
+                  description: `<@${functionCall.message.author.id}> needs comfort in peer support, would you like to check in?`
+                }
+              ]
+            });
+
+            setTimeout(
+              () =>
+                functionCall.message.reply(
+                  "Hi! If you are looking for someone to listen or wish to vent in dms, please use `!!support` command to ping peer supporters instead."
+                ),
+              1e3 * 60 * 5 // 5 minutes
+            );
+          } else {
+            functionCall.message.reply({
+              embeds: [
+                {
+                  color: 0xffffff,
+                  description:
+                    "An error ocurred: Cannot find general channel. Please report this issue to staff team."
+                }
+              ]
+            });
+          }
+        } else {
+          functionCall.message.reply({
+            embeds: [
+              {
+                color: 0xffffff,
+                description: `Sorry, you are on cooldown! Please wait ${cooldownExpireTime.toNow(
+                  true
+                )} before using the command again.`
+              }
+            ]
+          });
+        }
+      } else {
+        functionCall.message.reply({
+          embeds: [
+            {
+              color: 0xffffff,
+              description: "Sorry! This function is not enabled at this moment."
+            }
+          ]
+        });
+      }
     }
   },
   {

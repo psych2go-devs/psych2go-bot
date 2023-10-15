@@ -1,4 +1,4 @@
-import { Client, ClientUser, Intents } from "discord.js";
+import { Client, ClientUser, GatewayIntentBits } from "discord.js";
 import messageCreate from "./event/messageCreate";
 import guildMemberAdd from "./event/guildMemberAdd";
 import guildMemberRemove from "./event/guildMemberRemove";
@@ -13,10 +13,11 @@ import handleNewVidEvent from "./background/handleNewVidEvent";
 
 const client = new Client({
   intents: [
-    Intents.FLAGS.GUILDS,
-    Intents.FLAGS.GUILD_MESSAGES,
-    Intents.FLAGS.GUILD_MEMBERS,
-    Intents.FLAGS.GUILD_PRESENCES
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.GuildMembers,
+    GatewayIntentBits.GuildPresences,
+    GatewayIntentBits.MessageContent
   ]
 });
 

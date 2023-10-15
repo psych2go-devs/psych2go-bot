@@ -29,6 +29,13 @@ export default () => {
     }
   }
 
+  if (process.env.ENABLE_ASSIST_COMMAND) {
+    if (!process.env.GENERAL_CHANNEL_ID) {
+      console.error("`GENERAL_CHANNEL_ID` environment variable is not defined");
+      process.exit(1);
+    }
+  }
+
   process.env.COMMAND_PREFIX = process.env.COMMAND_PREFIX || defaultMessageCommandPrefix;
   process.env.CANDY_REACTION = process.env.CANDY_REACTION || "";
   process.env.TRANSFORMERS_SERVER_ADDRESS = process.env.TRANSFORMERS_SERVER_ADDRESS || "";
