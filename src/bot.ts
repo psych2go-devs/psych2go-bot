@@ -5,6 +5,7 @@ import guildMemberRemove from "./event/guildMemberRemove";
 import guildMemberUpdate from "./event/guildMemberUpdate";
 import handlePresence from "./background/handlePresence";
 import handleNewVidEvent from "./background/handleNewVidEvent";
+import onStart from "./event/onStart";
 
 // DiscordJS documentations can be found here
 // https://discord.js.org/#/docs/main/main/general/welcome
@@ -25,6 +26,9 @@ const client = new Client({
 
 client.on("ready", () => {
   console.log(`Logged in as "${(client.user as ClientUser).tag}"`);
+
+  // Call onStart function
+  onStart(client);
 
   // Handle client presence
   handlePresence(client);
