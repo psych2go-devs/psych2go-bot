@@ -1,3 +1,4 @@
+import { ChannelType, DiscordAPIError, type Client } from "discord.js";
 import jsonStickyMessages from "../asset/sticky-messages.json";
 
 class StickyMessage {
@@ -23,6 +24,16 @@ class StickyMessage {
 
   public setSentId(sentId: string) {
     this.#sentId = sentId;
+  }
+
+  public async send(client: Client) {
+    let channel = client.channels.cache.get(this.#channelId);
+
+    if (channel !== undefined && channel.type === ChannelType.GuildText) {
+      if (this.#sentId !== undefined) channel.messages.delete(this.#sentId).catch(() => {});
+      let sentStickyMessage = await channel.send(this.#message);
+      this.setSentId(sentStickyMessage.id);
+    }
   }
 }
 
