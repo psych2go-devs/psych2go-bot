@@ -24,12 +24,12 @@ export default (message: Message) => {
   // Message is sent to guild
   if (message.member) {
     let messageCommandTriggered = false;
-    let messageAuthorIsDev = false;
+    let messageAuthorIsStaff = false;
     let messageAuthorIsAdmin = false;
 
     // Check message author role level
     message.member.roles.cache.map((role) => {
-      if (roleId.devRoleIds.includes(role.id)) messageAuthorIsDev = true;
+      if (roleId.staffRoleIds.includes(role.id)) messageAuthorIsStaff = true;
       if (roleId.adminRoleIds.includes(role.id)) messageAuthorIsAdmin = true;
     });
 
@@ -53,8 +53,8 @@ export default (message: Message) => {
             messageCommandTriggered = true;
 
             if (
-              !(messageCommand.isDevCommand || messageCommand.isAdminCommand) ||
-              (messageCommand.isDevCommand && (messageAuthorIsAdmin || messageAuthorIsDev)) ||
+              !(messageCommand.isStaffCommand || messageCommand.isAdminCommand) ||
+              (messageCommand.isStaffCommand && (messageAuthorIsAdmin || messageAuthorIsStaff)) ||
               (messageCommand.isAdminCommand && messageAuthorIsAdmin)
             ) {
               let commandArgs = trimmedMessage
@@ -68,7 +68,7 @@ export default (message: Message) => {
                 args: commandArgs,
                 matchedCommand: command,
                 fromBot: message.author.bot,
-                isDev: messageAuthorIsDev,
+                isStaff: messageAuthorIsStaff,
                 isAdmin: messageAuthorIsAdmin
               };
 
@@ -98,9 +98,9 @@ export default (message: Message) => {
 
             if (messageLowerNoEmoji.includes(containString.toLowerCase())) {
               if (
-                !(messageContain.isDevContain || messageContain.isAdminContain) ||
-                (messageContain.isDevContain && (messageAuthorIsAdmin || messageAuthorIsDev)) ||
-                (messageContain.isAdminContain && messageAuthorIsAdmin)
+                !(messageContain.isStaffContain || messageContain.isAdminContain) ||
+                (messageContain.isStaffContain && (messageAuthorIsAdmin || messageAuthorIsStaff)) ||
+                (messageContain.isAdminContain && messageAuthorIsStaff)
               ) {
                 containFunction = messageContain.fn;
 
@@ -114,7 +114,7 @@ export default (message: Message) => {
               message,
               matchedContain: containString,
               fromBot: message.author.bot,
-              isDev: messageAuthorIsDev,
+              isStaff: messageAuthorIsStaff,
               isAdmin: messageAuthorIsAdmin
             };
 

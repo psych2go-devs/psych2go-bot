@@ -4,7 +4,7 @@ export interface MessageContainFunctionCall {
   message: Message;
   matchedContain: string;
   fromBot: boolean;
-  isDev: boolean;
+  isStaff: boolean;
   isAdmin: boolean;
 }
 
@@ -12,6 +12,6 @@ export interface MessageContain {
   contain: string[];
   fn(functionCall: MessageContainFunctionCall): any;
   allowBot?: boolean;
-  isDevContain?: boolean;
+  isStaffContain?: boolean;
   isAdminContain?: boolean;
 }
