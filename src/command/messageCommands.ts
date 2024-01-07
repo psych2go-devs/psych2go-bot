@@ -419,7 +419,7 @@ const messageCommands: MessageCommand[] = [
   },
   {
     command: [createCommandString("say")],
-    isDevCommand: true,
+    isStaffCommand: true,
     fn(functionCall) {
       let replyUsage = () => {
         functionCall.message.reply({
@@ -439,7 +439,7 @@ const messageCommands: MessageCommand[] = [
   },
   {
     command: [createCommandString("eval")],
-    isDevCommand: true,
+    isStaffCommand: true,
     fn(functionCall) {
       functionCall.message.reply("This command is temporary disabled");
       // if (!functionCall.args.length) {
@@ -456,7 +456,7 @@ const messageCommands: MessageCommand[] = [
   },
   {
     command: [createCommandString("testboost")],
-    isDevCommand: true,
+    isStaffCommand: true,
     fn(functionCall) {
       let now = new Date().toISOString();
       let oldMember = Reflect.construct(GuildMember, [

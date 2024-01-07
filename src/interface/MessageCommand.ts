@@ -5,7 +5,7 @@ export interface MessageCommandFunctionCall {
   args: string[];
   matchedCommand: string;
   fromBot: boolean;
-  isDev: boolean;
+  isStaff: boolean;
   isAdmin: boolean;
 }
 
@@ -14,6 +14,6 @@ export interface MessageCommand {
   fn(functionCall: MessageCommandFunctionCall): any;
   allowBot?: boolean;
   ignoreCase?: boolean;
-  isDevCommand?: boolean;
+  isStaffCommand?: boolean;
   isAdminCommand?: boolean;
 }
