@@ -1,6 +1,6 @@
 {
   "name": "psych2go-bot",
-  "version": "0.5.0",
+  "version": "0.0.2",
   "description": "DiscordJS bot used in Psych2Go Discord server!",
   "main": "dist/index.js",
   "scripts": {
