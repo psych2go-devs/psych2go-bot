@@ -19,6 +19,5 @@ export default (client: Client) => {
     setPresence(client);
     let presenceHandler = setInterval(setPresence, 60e3 * 30, client); // Every 30 minutes
     presenceHandler.unref();
-    
   }
 };
