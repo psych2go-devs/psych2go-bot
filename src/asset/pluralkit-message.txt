@@ -1,6 +1,6 @@
-Hey{ARGS}!
+Hey, {ARGS}!
 
-I notice that you're confused about chatting with a "BOT", so let me help you shed some light on this. Unlike me, **they aren't bots!** They're real people using a tool, PluralKit, to help them communicate.
+I notice that you're confused about chatting with a "BOT", so let me help you shed some light on this. Unlike me, **they aren't bots!** They're real people using a tool, PluralKit, to help them communicate. The bot utilises webhooks to display different alters, which due to discord limits are forced to display under the BOT tag, however are not.
 
 The people who use this bot have a condition called Dissociative Identity Disorder (DID), in which the person has two or more personalities (shortened to "alters"). Many people with DID have experienced severe trauma, and in order to help them cope with the stress they've endured (and some who continue to endure), they use their alters to communicate. This is often sadly a chronic disorder, so please try to stay respectful! 
 
