@@ -1,9 +1,9 @@
-Hey, {ARGS}!
+Hello {ARGS}!
 
-I notice that you're confused about chatting with a "BOT", so let me help you shed some light on this. Unlike me, **they aren't bots!** They're real people using a tool, PluralKit, to help them communicate. The bot utilises webhooks to display different alters, which due to discord limits are forced to display under the BOT tag, however are not.
+I understand there may be some confusion regarding chatting with individuals with a "BOT" tag. Let me clarify: these individuals are not bots! They are real people utilizing a tool called PluralKit to help them communicate.
 
-The people who use this bot have a condition called Dissociative Identity Disorder (DID), in which the person has two or more personalities (shortened to "alters"). Many people with DID have experienced severe trauma, and in order to help them cope with the stress they've endured (and some who continue to endure), they use their alters to communicate. This is often sadly a chronic disorder, so please try to stay respectful! 
+Users who use this tool may have Dissociative Identity Disorder (DID)/Other Specified Dissociative Disorder (OSDD).  DID is characterized by the presence of two or more distinct personality states (often referred to as "alters").  DID can develop as a coping mechanism for severe or ongoing trauma.  It's important to approach these interactions with respect, as DID is often a chronic condition.
 
-And if you want to know more about the disorder, feel free to head to a thread that Alley created or you can ask her or any of the other systems about it (if they feel comfortable answering, please don't pressure them!) Be respectful. :) 
+If you'd like to learn more, please refer to this thread <#876856211746746388>, or respectfully engage with other systems (if they are comfortable discussing it).  Please be mindful and avoid pressuring anyone for information.
 
-Farewell! <:psi_salute:860198394714652722>
+Best regards, <:psi_salute:860198394714652722>
