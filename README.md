@@ -1,3 +1,7 @@
+# Important Notice
+
+The version of the bot used directly in the server is more up-to-date and is not currently available in this repository, nor is there any intent to add it to this repository.
+
 # Psych2Go Bot
 
 Psych2Go Bot (Psi) does useful and fun stuff writen in [TypeScript][typescript-webpage] ([JavaScript][javascript-webpage]) ([NodeJS][nodejs-webpage])
