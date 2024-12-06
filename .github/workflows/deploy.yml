@@ -35,7 +35,7 @@ jobs:
   deploy:
     needs: code-check
     runs-on: ubuntu-20.04
-    if: github.event_name != 'pull_request'
+    if: false
     steps:
       - name: Clone repository
         uses: actions/checkout@v2
