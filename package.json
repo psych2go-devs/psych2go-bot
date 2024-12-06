@@ -1,6 +1,6 @@
 {
   "name": "psych2go-bot",
-  "version": "0.0.1",
+  "version": "0.5.0",
   "description": "DiscordJS bot used in Psych2Go Discord server!",
   "main": "dist/index.js",
   "scripts": {
@@ -9,6 +9,7 @@
     "build:clean": "yarn clean && yarn build",
     "build:test": "tsc --noEmit",
     "dev": "nodemon",
+    "prod": "npm i && npm run build && node ./dist/index.js",
     "clean": "rimraf dist/",
     "copy-files": "copyfiles -u 2 \"src/asset/**/*\" \"dist/asset/\"",
     "lint": "prettier --check src/",
@@ -27,13 +28,15 @@
   },
   "homepage": "https://github.com/psych2go-devs/psych2go-bot",
   "dependencies": {
+    "@daangamesdg/youtube-notifications": "^1.0.2",
     "axios": "^0.25.0",
-    "discord.js": "^14.13.0",
+    "discord": "^0.8.2",
+    "discord.js": "^14.14.1",
     "dotenv": "^14.3.0",
     "format-message": "^6.2.3",
     "lodash": "^4.17.21",
     "moment": "^2.29.1",
-    "youtube-notify": "^2.0.2"
+    "youtube-notification": "^1.1.0"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.178",
@@ -42,7 +45,7 @@
     "nodemon": "^2.0.15",
     "prettier": "^2.5.1",
     "rimraf": "^3.0.2",
-    "typescript": "^5.2.2",
+    "typescript": "^5.3.3",
     "yarn": "^1.22.17"
   },
   "engines": {
